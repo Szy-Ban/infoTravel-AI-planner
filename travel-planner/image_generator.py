@@ -4,10 +4,12 @@ class ImageGenerator:
     def __init__(self, api_key: str):
         self.client = OpenAI(api_key=api_key)
 
-    def generate_trip_image(self, trip_summary: str) -> str:
+    def generate_trip_image(self, trip_summary: str, interests: list) -> str:
+
+        interests_text = ", ".join(interests)
 
         # generate image prompt
-        prompt = f"Create a stunning and vibrant thumbnail for a trip to Ireland, based on a trip summary. You don't need to visualize all points of interest, instead try to pick up a general theme. \n The trip summary is: {trip_summary}."
+        prompt = f"Create a thumbnail for a trip to Ireland, based on user preferences and a trip summary. Do not generate any text. You don't need to visualize all points of interest, instead try to pick up a general theme. The image is supposed to advertise the trip to the user, in other words the user must be convinced that the trip is based on their preferences. \n User preferences: {interests_text} \n The trip summary is: {trip_summary}."
 
         try:
             response = self.client.images.generate(

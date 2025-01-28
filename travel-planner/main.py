@@ -238,11 +238,11 @@ def main():
         plan = planner.generate_travel_plan(poi_dict, preferences)
 
         # Generate travel poster
-        print("Generating a travel poster...")
-        image_url = image_generator.generate_trip_image(plan['trip_summary'])
+        print("Generating thumbnail...")
+        image_url = image_generator.generate_trip_image(plan['trip_summary'], interests=preferences.interests)
         if image_url:
             print(f"Generated image URL: {image_url}")
-            save_image = input("Czy chcesz zapisać obraz lokalnie? (y/n): ").lower()
+            save_image = input("Do you want to save this image? (y/n): ").lower()
             if save_image == 'y':
                 filename = "travel_poster.png"
                 image_generator.save_image_from_url(image_url, filename)
