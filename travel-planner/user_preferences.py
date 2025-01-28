@@ -29,8 +29,6 @@ class UserPreferences:
             self.special_requirements = []
 
     def validate(self):
-
-        # Validate user preferences
         if not self.interests:
             raise ValueError("At least one interest must be specified")
 
@@ -49,8 +47,6 @@ class UserPreferences:
         return True
 
     def to_dict(self):
-        
-        #Convert preferences to dictionary
         return {
             "interests": self.interests,
             "trip_duration": self.trip_duration,

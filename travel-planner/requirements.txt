@@ -1,0 +1,3 @@
+torch
+transformers
+openai==1.60.1

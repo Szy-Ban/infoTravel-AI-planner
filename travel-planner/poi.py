@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from typing import Optional, List
 
-
 @dataclass
 class POI:
     name: str
@@ -26,13 +25,12 @@ class POI:
 
     @classmethod
     def from_json(cls, data: dict) -> 'POI':
-        # POI from JSON
         return cls(
             name=data['Name'],
             location=f"{data.get('AddressLocality', '')}, {data.get('AddressRegion', '')}",
             short_description="",  # AI
-            full_description="",  # AI
-            image="",  # Placeholder
+            full_description="",   # AI
+            image="",              # Placeholder
             category=next(iter(data.get('Tags', '').split(',')), None),
             tags=data.get('Tags', '').split(','),
             latitude=float(data.get('Latitude', 0)),
@@ -44,8 +42,6 @@ class POI:
         )
 
     def to_dict(self) -> dict:
-
-        # POI to dictionary
         return {
             'name': self.name,
             'location': self.location,
@@ -70,8 +66,6 @@ class POI:
         }
 
     def estimate_visit_duration(self) -> int:
-
-        # calculate time
         category_durations = {
             'Museum': 180,
             'Castle': 120,
@@ -82,20 +76,15 @@ class POI:
             'Historic': 90,
             'Walking': 120,
         }
-
         if self.category:
             for cat, duration in category_durations.items():
                 if cat.lower() in self.category.lower():
                     return duration
-
         return self.visit_duration
 
     def is_compatible_with_interests(self, interests: List[str]) -> bool:
-
-        # POI match user interest?
         if not interests:
             return True
-
         return any(
             interest.lower() in tag.lower()
             for interest in interests

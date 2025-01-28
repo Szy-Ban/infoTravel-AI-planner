@@ -1,77 +1,55 @@
 from typing import Dict, List
-from openai import OpenAI
-from config import GPT_MODEL, MAX_TOKENS, TEMPERATURE
+from text_generator import TextGenerator
 
 
 class POIDescriptionGenerator:
-    def __init__(self, api_key: str):
-        self.client = OpenAI(api_key=api_key)
+    def __init__(self, text_generator: TextGenerator):
+        self.text_generator = text_generator
 
     def generate_poi_description(self, poi: Dict) -> str:
-
-        # LLM description for POI
-        prompt = self._create_poi_prompt(poi)
+        system_prompt = (
+            "You are a knowledgeable travel guide providing concise, engaging descriptions "
+            "of points of interest in Ireland."
+        )
+        user_prompt = f"""
+        Create a brief, engaging description for this point of interest:
+        Name: {poi.get('Name', '')}
+        Location: {poi.get('AddressLocality', '')}, {poi.get('AddressRegion', '')}, Ireland
+        Categories: {poi.get('Tags', '')}
+        Include a practical tip for visitors.
+        Keep the description concise but informative.
+        """
 
         try:
-            response = self.client.chat.completions.create(
-                model=GPT_MODEL,
-                messages=[
-                    {"role": "system",
-                     "content": "You are a knowledgeable travel guide providing concise, engaging descriptions of points of interest in Ireland."},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=MAX_TOKENS,
-                temperature=TEMPERATURE
-            )
-
-            return response.choices[0].message.content.strip()
+            return self.text_generator.generate_chat_completion(system_prompt, user_prompt)
         except Exception as e:
             print(f"Error generating description for {poi['Name']}: {str(e)}")
             return f"Description unavailable for {poi['Name']}"
 
     def generate_day_summary(self, pois: List[Dict]) -> str:
-
-        # summary for activity
+        system_prompt = (
+            "You are a helpful travel planner creating concise day summaries for travelers in Ireland."
+        )
         poi_names = [poi['Name'] for poi in pois]
-        prompt = f"Create a brief summary for a day of travel visiting these locations: {', '.join(poi_names)}. Include travel tips and suggested timing."
+        user_prompt = (
+            "Create a brief summary for a day of travel visiting these locations: "
+            f"{', '.join(poi_names)}. Include travel tips and suggested timing."
+        )
 
         try:
-            response = self.client.chat.completions.create(
-                model=GPT_MODEL,
-                messages=[
-                    {"role": "system",
-                     "content": "You are a helpful travel planner creating concise day summaries for travelers in Ireland."},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=MAX_TOKENS,
-                temperature=TEMPERATURE
-            )
-
-            return response.choices[0].message.content.strip()
+            return self.text_generator.generate_chat_completion(system_prompt, user_prompt)
         except Exception as e:
             print(f"Error generating day summary: {str(e)}")
             return "Day summary unavailable"
 
-    def _create_poi_prompt(self, poi: Dict) -> str:
-
-        # prompt for POI gen
-        return f"""
-        Create a brief, engaging description for this point of interest:
-        Name: {poi['Name']}
-        Location: {poi['AddressLocality']}, {poi['AddressRegion']}, Ireland
-        Categories: {poi['Tags']}
-        Include a practical tip for visitors.
-
-        Keep the description concise but informative.
-        """
-
     def generate_itinerary_tips(self, preferences: Dict, pois: List[Dict]) -> str:
-
-        # generate tips
+        system_prompt = (
+            "You are a knowledgeable travel advisor providing practical tips for traveling in Ireland."
+        )
         poi_count = len(pois)
         regions = list(set(poi['AddressRegion'] for poi in pois))
 
-        prompt = f"""
+        user_prompt = f"""
         Create travel tips for an itinerary with these details:
         - Duration: {preferences['trip_duration']} days
         - Number of locations: {poi_count}
@@ -88,18 +66,7 @@ class POIDescriptionGenerator:
         """
 
         try:
-            response = self.client.chat.completions.create(
-                model=GPT_MODEL,
-                messages=[
-                    {"role": "system",
-                     "content": "You are a knowledgeable travel advisor providing practical tips for traveling in Ireland."},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=MAX_TOKENS,
-                temperature=TEMPERATURE
-            )
-
-            return response.choices[0].message.content.strip()
+            return self.text_generator.generate_chat_completion(system_prompt, user_prompt)
         except Exception as e:
             print(f"Error generating itinerary tips: {str(e)}")
             return "Itinerary tips unavailable"
