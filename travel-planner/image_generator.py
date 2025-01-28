@@ -1,3 +1,5 @@
+import os
+import requests
 from openai import OpenAI
 
 class ImageGenerator:
@@ -28,15 +30,24 @@ class ImageGenerator:
 
     def save_image_from_url(self, image_url: str, filename: str = "travel_poster.png") -> None:
 
+        # Define the directory path where you want to save the file
+        output_directory = "./output"
+
+        # Create the directory if it does not exist
+        if not os.path.exists(output_directory):
+            os.makedirs(output_directory)
+
+        # Full path to the file
+        file_path = os.path.join(output_directory, filename)
+
         # Download and save the image
-        import requests
         try:
             print(f"Downloading image from {image_url}...")
             response = requests.get(image_url)
             if response.status_code == 200:
-                with open(filename, 'wb') as f:
+                with open(file_path, 'wb') as f:
                     f.write(response.content)
-                print(f"Image saved as {filename}")
+                print(f"Image saved as {file_path}")
             else:
                 print(f"Failed to download image. HTTP status code: {response.status_code}")
         except Exception as e:

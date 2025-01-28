@@ -15,7 +15,6 @@ def get_openai_api_key():
         os.environ["OPENAI_API_KEY"] = api_key
     return api_key
 
-
 def get_user_input():
     # User preferences by input
     print("\n=== Ireland Travel Planner ===\n")
@@ -206,11 +205,17 @@ def display_travel_plan(plan, image_url=None):
 
 
 def save_plan_to_file(plan, filename="travel_plan.json"):
-    # Save
-    with open(filename, 'w', encoding='utf-8') as f:
-        json.dump(plan, f, indent=2, ensure_ascii=False)
-    print(f"\nPlan saved to {filename}")
+    directory = "./output"
 
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    file_path = os.path.join(directory, filename)
+
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(plan, f, indent=2, ensure_ascii=False)
+
+    print(f"\nPlan saved to {file_path}")
 
 def main():
     try:
@@ -225,7 +230,6 @@ def main():
         planner = TravelPlanner(api_key)
         poi_manager = POIManager()
         image_generator = ImageGenerator(api_key)  # Initialize ImageGenerator
-
         # Get user preferences
         preferences = get_user_input()
 
