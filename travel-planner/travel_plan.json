@@ -1,61 +1,103 @@
 {
-  "trip_summary": "Day 1:\n- Start your trip in Donegal and explore the stunning Glenveagh National Park, known for its beautiful landscapes, hiking trails, and the enchanting Glenveagh Castle.\n- Head to Sligo to visit the historic Carrowmore Megalithic Cemetery, one of the largest and oldest megalithic cemeteries in Ireland, providing a glimpse into ancient history.\nDay 2:\n- Drive to Cavan and discover the Marble Arch Caves, a fascinating underground world of caves and rivers, perfect for an adventurous tour.\n- End your trip in Roscommon with a visit to the majestic King House, a historic Georgian mansion turned museum showcasing the region's rich history and culture.\n\nThis 2-day trip offers a perfect blend of natural beauty, history, and adventure, allowing you to explore diverse regions of Ireland while enjoying a moderate-paced itinerary. From exploring ancient ruins to cruising through underground caves, cycling through national parks, and visiting historic castles, this itinerary caters to a wide range of interests, making it a memorable and special travel experience.",
+  "trip_summary": "Day 1:\n- Start your journey in Cavan and visit the historic Cavan County Museum to learn about the region's rich heritage.\n- Explore the picturesque Roscommon region and take a guided tour of the medieval Roscommon Castle.\n- Enjoy a leisurely lunch at a cozy cafe in Laois, known for its charming countryside and traditional Irish cuisine.\n\nDay 2:\n- Head to Kerry and embark on a scenic boat tour along the stunning coastline, offering breathtaking views and opportunities for photography.\n- Visit the iconic Muckross House and Gardens in Killarney, a historic estate with beautiful art galleries and manicured grounds.\n- Experience kayaking on the tranquil waters of Kerry's lakes, surrounded by natural landscapes and wildlife.\n\nDay 3:\n- Journey to Donegal and explore the mystical ruins of Donegal Abbey, a serene site steeped in history and spirituality.\n- Discover the vibrant local art scene at a contemporary art gallery in Donegal town, showcasing the work of talented Irish artists.\n- Conclude your trip with a relaxing walk through Glenveagh National Park, a pristine natural oasis perfect for birdwatching and peaceful reflection.\n\nThis 3-day itinerary offers a diverse range of experiences, from exploring historic castles and churches to enjoying outdoor activities like kayaking and walking in breathtaking natural landscapes. Traveling by car allows for flexibility and the opportunity to discover hidden gems in each region at a slow and leisurely pace. Overall, this trip provides a perfect blend of culture, history, and nature, making it a memorable and special Irish adventure.",
   "days": [
     {
       "day_number": 1,
-      "day_summary": "Start your day by exploring Dun na Rí Forest Park, known for its serene walking trails and ancient ruins. Spend the morning wandering through the lush greenery and enjoying the peaceful surroundings.\n\nIn the afternoon, head to Ionad Cois Locha, a charming lakeside center offering boat trips and water activities. You can relax by the lake, go for a boat ride, or explore the surrounding area.\n\nTravel tip: Wear comfortable walking shoes for Dun na Rí Forest Park and bring a light jacket for changing weather by the lake.\n\nSuggested timing: \n- Morning: Dun na Rí Forest Park\n- Afternoon: Ionad Cois Locha",
+      "day_summary": "Start your day by exploring the Rinn Duin Castle Loop, a scenic trail offering stunning views of the ancient ruins and surrounding landscape. Spend about 1-2 hours here, walking the loop and taking in the history.\n\nNext, head to The Shannon Pot, the source of the River Shannon. Enjoy the peaceful setting and take some time to relax by the water. Plan to spend around 1 hour at this natural wonder.\n\nFinish your day at the Ballyhugh Art and Culture Centre Painting, where you can immerse yourself in local art and culture. Take a guided tour or participate in a painting workshop. Allow approximately 1-2 hours for this experience.\n\nTravel tip: Wear comfortable shoes for walking on uneven terrain at the castle loop and bring a camera to capture the beautiful scenery. It's recommended to have your own transportation for this day trip to easily navigate between locations.\n\nOverall suggested timing: Plan for a full day of exploration, starting in the morning and ending in the late afternoon to make the most of these unique and enriching experiences.",
       "activities": [
         {
-          "name": "Dun na Rí Forest Park",
-          "location": "Kingscourt, Cavan",
-          "description": "Nestled in the charming town of Kingscourt in Cavan, Ireland, Dun na Rí Forest Park is a haven for nature lovers and outdoor enthusiasts. This enchanting forest park offers picturesque walking trails through ancient woodlands, providing a peaceful escape from the hustle and bustle of modern life. Visitors can immerse themselves in the beauty of nature, surrounded by lush greenery and the soothing sounds of the forest.\n\nPractical tip: Don't forget to wear comfortable walking shoes and bring along some snacks and water to fully enjoy your stroll through Dun na Rí Forest Park.",
+          "name": "Rinn Duin Castle Loop",
+          "location": ", Roscommon",
+          "description": "Explore the enchanting Rinn Duin Castle Loop in Roscommon, Ireland, where history and nature intertwine seamlessly. This scenic walking trail leads you through the ruins of Rinn Duin Castle, a historic gem that once stood proudly in the Irish landscape. Immerse yourself in the stories of the past as you wander through the ancient walls and imagine life in a bygone era. Don't forget to wear sturdy footwear for this adventure, as some parts of the trail may be uneven.",
           "timing": "09:00 - 11:00"
         },
         {
-          "name": "Ionad Cois Locha",
-          "location": "Letterkenny, Donegal",
-          "description": "Welcome to Ionad Cois Locha in Letterkenny, Donegal! This charming spot offers a mix of activities including shopping for crafts, cruising on the lake, kayaking, and guided walking tours. Explore the museum and attractions, then relax at the café with delicious food and drinks. Don't miss the chance to take a boat tour for a unique perspective of the area. Practical tip: Check the weather forecast before your visit to plan your outdoor activities accordingly.",
+          "name": "The Shannon Pot",
+          "location": ", Cavan",
+          "description": "Nestled in the picturesque county of Cavan, Ireland, The Shannon Pot is where the mighty River Shannon originates. As a significant discovery point, this spot holds a special place in Irish folklore and geography. Visitors can witness the birthplace of Ireland's longest river, surrounded by serene natural beauty. A practical tip for visitors is to wear sturdy footwear, as the area can be muddy, especially after rainfall.",
           "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "Ballyhugh Art and Culture Centre Painting",
+          "location": "Ballyconnell, Cavan",
+          "description": "Immerse yourself in the vibrant world of Irish art and culture at Ballyhugh Art and Culture Centre in Ballyconnell, Cavan. This picturesque center offers a diverse range of paintings, crafts, and activities that showcase the rich artistic heritage of Ireland. From browsing unique artworks to participating in workshops, there's something for every art enthusiast here. Practical tip: Check the center's schedule for any upcoming workshops or events to make the most of your visit.",
+          "timing": "14:00 - 16:00"
         }
       ]
     },
     {
       "day_number": 2,
-      "day_summary": "Start your day by exploring the ancient ruins of Rinn Duin Castle Loop, known for its picturesque setting and historical significance. Allow 1-2 hours for a leisurely visit and taking in the views.\n\nAfterward, head to the dramatic Gleniff Horseshoe, a stunning valley surrounded by towering cliffs and lush greenery. Plan for a scenic drive or hike around the area, allowing 2-3 hours to fully appreciate the natural beauty.\n\nTravel tip: Wear comfortable walking shoes and dress in layers, as weather conditions in Ireland can change quickly. Bring a camera to capture the breathtaking landscapes.\n\nOverall suggested timing: Start your day early to make the most of your visit to both Rinn Duin Castle Loop and Gleniff Horseshoe, allowing for a full day of exploration and relaxation in the Irish countryside.",
+      "day_summary": "Start your day by taking the Arranmore Ferry for a scenic journey to the island. Enjoy the beautiful views and fresh sea air during the short boat ride. \n\nNext, visit Ionad Cois Locha, a cultural center showcasing the history and traditions of the area. Take your time exploring the exhibits and learning about the local heritage.\n\nIn the afternoon, head to Lough Derg Place of Pilgrimage, a serene and spiritual site where visitors can reflect and enjoy the peaceful surroundings. Take a walk around the lake or participate in a pilgrimage activity if interested.\n\nTravel tip: Be sure to check the ferry schedule in advance and plan your day accordingly. Allocate around 1-2 hours at each location to fully experience the attractions.\n\nSuggested timing:\n- Morning: Arranmore Ferry ride\n- Late morning/early afternoon: Visit Ionad Cois Locha\n- Afternoon: Explore Lough Derg Place of Pilgrimage",
       "activities": [
         {
-          "name": "Rinn Duin Castle Loop",
-          "location": ", Roscommon",
-          "description": "Step back in time as you explore the enchanting Rinn Duin Castle Loop in Roscommon, Ireland. This walking trail takes you through the picturesque countryside to the haunting ruins of Rinn Duin Castle, a historic gem shrouded in mystery and stories of the past. Take a leisurely stroll and immerse yourself in the rich history of this ancient site. Don't forget to wear comfortable walking shoes and bring along a camera to capture the beauty of the ruins and the surrounding landscape.",
+          "name": "The Arranmore Ferry",
+          "location": "Burtonport, Donegal",
+          "description": "Hop aboard the Arranmore Ferry in Burtonport, Donegal, for a scenic voyage to the enchanting Arranmore Island. This transport and activity operator offers a convenient way to reach this offshore gem, known for its rugged beauty and rich history. Enjoy the boat ride and explore the island's charms, from stunning cliffs to cozy pubs. Practical tip: Check the ferry schedule in advance and arrive early to secure your spot for a smooth journey.",
           "timing": "09:00 - 11:00"
         },
         {
-          "name": "Gleniff Horseshoe",
-          "location": ", Sligo",
-          "description": "Nestled in the picturesque county of Sligo, Ireland, the Gleniff Horseshoe offers a stunning natural landscape perfect for cycling and walking enthusiasts. This horseshoe-shaped valley is surrounded by majestic mountains, providing a peaceful retreat for outdoor lovers. A practical tip for visitors: Dress in layers as the weather can change quickly in this area.",
+          "name": "Ionad Cois Locha",
+          "location": "Letterkenny, Donegal",
+          "description": "Welcome to Ionad Cois Locha in Letterkenny, Donegal! This versatile spot offers a delightful blend of activities for all visitors. From shopping for local crafts to enjoying a leisurely cruise or kayaking on the tranquil waters, there's something for everyone here. Take a relaxing walk around the area, explore the museum and attractions, and refuel at the cozy café with delicious food and drinks. A practical tip for visitors: Check the schedule in advance for boat tours and activities to make the most of your visit.",
           "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "Lough Derg Place of Pilgrimage",
+          "location": "Pettigo, Donegal",
+          "description": "Welcome to Lough Derg, a place of pilgrimage in Pettigo, Donegal, Ireland. This serene location is known for its historic Church Abbey and Monastery, making it a sacred site for visitors seeking spiritual reflection. Situated on an offshore island, Lough Derg offers a peaceful retreat away from the hustle and bustle of everyday life. \n\nPractical tip: Remember to check the pilgrimage schedule and guidelines before visiting, as there are specific traditions and rituals associated with this spiritual journey.",
+          "timing": "14:00 - 16:00"
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "day_summary": "Begin your day by visiting Church Island, a serene and historic site with a beautiful old church ruin on Lough Currane. Spend about 1-2 hours exploring and enjoying the peaceful surroundings.\n\nNext, head to Lough Currane for some scenic views and perhaps a leisurely boat ride. Plan for about 1-2 hours here, depending on your interests.\n\nAfterward, make your way to Ross Castle, a stunning 15th-century fortress located on the shores of Lough Leane. Allow 1-2 hours to tour the castle and its grounds.\n\nFinish your day at The Irish Fly Fishing and Game Museum, where you can learn about the history and techniques of fly fishing in Ireland. Spend about 1-2 hours here before heading back to your accommodations.\n\nTravel tip: Wear comfortable shoes for walking and exploring the outdoor sites. Consider packing a picnic lunch to enjoy by the lakeside or at one of the locations. It's best to start early in the day to make the most of your time at each spot.",
+      "activities": [
+        {
+          "name": "Church Island, Lough Currane",
+          "location": ", Kerry",
+          "description": "Nestled on the serene waters of Lough Currane in County Kerry, Church Island offers a captivating glimpse into Ireland's ancient history. This secluded island is home to the ruins of an old church and monastery, exuding a sense of tranquility and mystery. Visitors can explore the remnants of the past while soaking in the peaceful beauty of the island and its surroundings.\n\nPractical tip: Access to Church Island is typically by boat, so remember to arrange transportation in advance to fully enjoy this hidden gem.",
+          "timing": "09:00 - 11:00"
+        },
+        {
+          "name": "Ross Castle",
+          "location": "Killarney, Kerry",
+          "description": "Welcome to Ross Castle, a stunning fortress nestled in the picturesque town of Killarney, County Kerry. This historic castle offers visitors a glimpse into Ireland's past with its well-preserved towers and majestic stone walls. Explore the grounds on foot or by boat, and immerse yourself in the beauty of the surrounding national park. Don't forget your camera to capture the breathtaking views of the natural landscape that surrounds this impressive castle.\n\nPractical tip: Be sure to check the opening hours and any guided tour options available to make the most of your visit to Ross Castle.",
+          "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "The Irish Fly Fishing and Game Museum",
+          "location": "Attanagh, Laois",
+          "description": "Immerse yourself in the world of fly fishing at The Irish Fly Fishing and Game Museum in Attanagh, Laois. This unique attraction showcases the art and heritage of angling in Ireland, with an impressive collection of fishing gear, historical artifacts, and interactive exhibits. Whether you're an experienced angler or a curious visitor, this museum offers a fascinating insight into the country's angling traditions. Practical tip: Don't forget to check the museum's opening hours before visiting to ensure you have enough time to explore this hidden gem.",
+          "timing": "14:00 - 16:00"
         }
       ]
     }
   ],
-  "general_tips": "1. General Travel Tips:\n- Ireland is known for its unpredictable weather, so be prepared for rain and pack layers.\n- Respect local customs and traditions, and be friendly to the locals who are known for their hospitality.\n- Carry some cash as not all places may accept credit cards, especially in rural areas.\n- Remember to drive on the left side of the road if you are renting a car.\n- Make sure to book accommodations in advance, especially during peak tourist seasons.\n\n2. Logistics Advice:\n- Since you are covering a lot of regions in just 2 days, it is essential to plan your route efficiently to minimize driving time.\n- Use GPS or a map to navigate as some rural areas may have limited or no cell service.\n- Fill up your gas tank whenever you see a petrol station, as some remote areas may have long stretches without one.\n- Check the opening hours of attractions and plan your visit accordingly.\n\n3. Time Management Suggestions:\n- Prioritize the locations you want to visit based on your special interests and allocate more time for those attractions.\n- Plan your itinerary with a balance of driving time and sightseeing time to avoid feeling rushed.\n- Consider waking up early to make the most of your day and to avoid crowds at popular tourist spots.\n- Factor in time for meals and breaks to rest and rejuvenate during your fast-paced itinerary.\n\n4. Weather and Packing Recommendations:\n- Pack waterproof clothing, including a rain jacket and sturdy walking shoes, as you will likely encounter rain during your trip.\n- Bring a small umbrella or a poncho to stay dry while exploring outdoor attractions.\n- Don't forget to pack sunscreen and sunglasses, as the sun can be strong even on cloudy days.\n- Carry a backpack with essentials like water, snacks, a map, and a camera to capture the beautiful landscapes.\n\nBy following these travel tips and recommendations, you can make the most of your 2-day itinerary in Ireland, exploring a diverse range of regions and attractions while enjoying the country's natural beauty and rich history.",
+  "general_tips": "Travel Tips for Exploring Multiple Locations in Ireland in 3 Days:\n\n1. General Travel Tips:\n- Plan your route in advance and prioritize the locations you want to visit based on your special interests.\n- Embrace the slow pace to fully immerse yourself in each destination and appreciate the local culture.\n- Be respectful of the environment and local communities during your travels.\n- Try to interact with locals to learn more about the history and traditions of each region.\n- Keep a flexible mindset in case you need to adjust your itinerary due to unexpected circumstances.\n\n2. Logistics Advice:\n- Rent a car for flexibility and convenience in exploring multiple locations.\n- Make sure to have a map or GPS navigation system to help you navigate between the regions.\n- Book accommodations in advance, considering locations that are central to your planned itinerary.\n- Stock up on snacks and water for the road, especially if you will be traveling through remote areas.\n- Check the opening hours of attractions and plan your visits accordingly.\n\n3. Time Management Suggestions:\n- Allocate sufficient time at each location to fully experience the special interests you have identified.\n- Consider early starts to make the most of your days and avoid crowds at popular tourist sites.\n- Plan for breaks during your drives to rest and enjoy the scenic views along the way.\n- Be mindful of travel times between regions and factor in potential delays due to traffic or road conditions.\n- Prioritize your must-see locations and be realistic about what you can comfortably fit into your 3-day itinerary.\n\n4. Weather and Packing Recommendations:\n- Check the weather forecast for each region you will be visiting and pack accordingly, including layers for changing conditions.\n- Bring comfortable walking shoes for exploring ruins and outdoor activities.\n- Consider packing a rain jacket or umbrella, as Ireland's weather can be unpredictable.\n- Don't forget sunscreen and a hat for protection during outdoor activities.\n- Carry a daypack with essentials like water, snacks, a camera, and any necessary medications for the road.\n\nBy following these travel tips and suggestions, you can make the most of your 3-day itinerary exploring the diverse regions of Ireland while focusing on your special interests. Enjoy your journey through the beautiful landscapes and rich heritage of the Emerald Isle!",
   "interests_accuracy": {
-    "overall_accuracy": 50.0,
+    "overall_accuracy": 24.07,
     "accuracy_per_interest": {
-      "Walking": 100.0,
-      "Historic Houses and Castle": 25.0,
-      "National and Forest Park": 25.0
+      "Craft": 22.22,
+      "Island": 33.33,
+      "Boat": 33.33,
+      "Ruins": 22.22,
+      "Fishing": 22.22,
+      "River": 11.11
     },
-    "total_pois": 4,
-    "matches_found": 6,
+    "total_pois": 9,
+    "matches_found": 13,
     "interest_matches": {
-      "Walking": 4,
-      "Historic Houses and Castle": 1,
-      "National and Forest Park": 1
+      "Craft": 2,
+      "Island": 3,
+      "Boat": 3,
+      "Ruins": 2,
+      "Fishing": 2,
+      "River": 1
     },
     "interests_usage": {
-      "used": 3,
-      "total": 3,
+      "used": 6,
+      "total": 6,
       "percentage": 100.0
     }
   }

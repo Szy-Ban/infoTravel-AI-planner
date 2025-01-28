@@ -4,12 +4,11 @@ from config import OPENAI_API_KEY
 from travel_planner import TravelPlanner
 from poi_manager import POIManager
 from user_preferences import UserPreferences
+from image_generator import ImageGenerator
 
 
 def get_openai_api_key():
-
     api_key = OPENAI_API_KEY
-
     if not api_key:
         print("\nOpenAI API key not found in environment variables.")
         api_key = input("Please enter your OpenAI API key: ").strip()
@@ -55,7 +54,7 @@ def get_user_input():
             interests_input = input("\nEnter numbers of your interests (e.g., 1,5,10 or 1-5): ").strip()
             selected_indices = set()
 
-            # Split by przecinek
+            # Split by comma
             for part in interests_input.split(','):
                 part = part.strip()
 
@@ -151,25 +150,31 @@ def get_user_input():
     )
 
 
-def display_travel_plan(plan):
+def display_travel_plan(plan, image_url=None):
     print("\n" + "=" * 50)
     print("YOUR IRELAND TRAVEL PLAN")
     print("=" * 50 + "\n")
 
-    # summary
+    # Summary
     print("Trip Summary:")
     print("-" * 20)
     print(plan['trip_summary'])
+
+    if image_url:
+        print("\nGenerated Travel Poster:")
+        print(image_url)
+
     print("\n" + "=" * 50 + "\n")
 
-    # accuracy and other stats
+    # Accuracy and other stats
     print("Interests Analysis:")
     print("-" * 20)
     print(f"Overall accuracy: {plan['interests_accuracy']['overall_accuracy']}%")
 
     print(
         f"\nInterests usage: {plan['interests_accuracy']['interests_usage']['used']}/{plan['interests_accuracy']['interests_usage']['total']} "
-        f"({plan['interests_accuracy']['interests_usage']['percentage']}%)")
+        f"({plan['interests_accuracy']['interests_usage']['percentage']}%)"
+    )
 
     print("\nAccuracy per interest:")
     for interest, accuracy in plan['interests_accuracy']['accuracy_per_interest'].items():
@@ -178,7 +183,7 @@ def display_travel_plan(plan):
     print(f"Total interest matches found: {plan['interests_accuracy']['matches_found']}")
     print("\n" + "=" * 50 + "\n")
 
-    # daily plans
+    # Daily plans
     for day in plan['days']:
         print(f"Day {day['day_number']}:")
         print("-" * 20)
@@ -193,7 +198,7 @@ def display_travel_plan(plan):
             print()
         print("-" * 50)
 
-    # general tips
+    # General tips
     print("\nGeneral Tips for Your Trip:")
     print("-" * 20)
     print(plan['general_tips'])
@@ -201,8 +206,7 @@ def display_travel_plan(plan):
 
 
 def save_plan_to_file(plan, filename="travel_plan.json"):
-
-    # save
+    # Save
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(plan, f, indent=2, ensure_ascii=False)
     print(f"\nPlan saved to {filename}")
@@ -217,25 +221,38 @@ def main():
         if not api_key:
             raise ValueError("OpenAI API key is required to run this program.")
 
-        # init comps
+        # Initialize components
         planner = TravelPlanner(api_key)
         poi_manager = POIManager()
+        image_generator = ImageGenerator(api_key)  # Initialize ImageGenerator
 
-        # preferences
+        # Get user preferences
         preferences = get_user_input()
 
-        # filter
+        # Filter POIs
         print("\nLoading and filtering points of interest...")
         poi_dict = poi_manager.load_and_filter_pois(poi_data_file, preferences)
 
-        # generate
+        # Generate travel plan
         print("Generating your travel plan...")
         plan = planner.generate_travel_plan(poi_dict, preferences)
 
-        # display
-        display_travel_plan(plan)
+        # Generate travel poster
+        print("Generating a travel poster...")
+        image_url = image_generator.generate_trip_image(plan['trip_summary'])
+        if image_url:
+            print(f"Generated image URL: {image_url}")
+            save_image = input("Czy chcesz zapisać obraz lokalnie? (y/n): ").lower()
+            if save_image == 'y':
+                filename = "travel_poster.png"
+                image_generator.save_image_from_url(image_url, filename)
+        else:
+            print("Failed to generate trip image.")
 
-        # save
+        # Display travel plan
+        display_travel_plan(plan, image_url)
+
+        # Save plan to file
         save_plan_to_file(plan)
 
     except Exception as e:
