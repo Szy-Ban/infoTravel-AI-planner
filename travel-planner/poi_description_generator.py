@@ -60,12 +60,7 @@ class POIDescriptionGenerator:
         Name: {poi['Name']}
         Location: {poi['AddressLocality']}, {poi['AddressRegion']}, Ireland
         Categories: {poi['Tags']}
-
-        Include:
-        1. What makes this place special
-        2. What visitors can see or do
-        3. Any relevant historical or cultural significance
-        4. A practical tip for visitors
+        Include a practical tip for visitors.
 
         Keep the description concise but informative.
         """

@@ -1,56 +1,62 @@
 {
-  "trip_summary": "Embark on a thrilling 1-day adventure in Ireland exploring the enchanting regions of Kilkenny and Donegal through public transportation. \n\n1. Kilkenny Castle: Begin your day with a visit to the majestic Kilkenny Castle, a symbol of Norman occupation in the region. Explore its beautifully preserved rooms and sprawling gardens, offering a glimpse into Ireland's rich history.\n\n2. Kilkenny City Walking Tour: Immerse yourself in the charming streets of Kilkenny with a guided walking tour. Discover hidden gems, local cafes, and artisan craft shops while learning about the city's folklore and vibrant culture.\n\n3. Donegal Bay Cruise: Head towards Donegal for a scenic cruise on Donegal Bay. Marvel at the rugged coastline, pristine waters, and possibly spot some marine wildlife. This relaxing boat trip offers panoramic views of the region's natural beauty.\n\n4. Donegal Castle: Conclude your day by visiting Donegal Castle, a striking structure dating back to the 15th century. Explore the castle's rooms, towers, and learn about its fascinating history as a stronghold in the northwest of Ireland.\n\nThis itinerary blends history, culture, and stunning landscapes, providing a perfect mix of sightseeing and relaxation. By relying on public transportation, travelers can enjoy a stress-free journey and focus on the highlights of each destination. Experience the best of Kilkenny and Donegal in a day, creating unforgettable memories in the heart of Ireland.",
+  "trip_summary": "Day 1:\n- Start your trip in Donegal and explore the stunning Glenveagh National Park, known for its beautiful landscapes, hiking trails, and the enchanting Glenveagh Castle.\n- Head to Sligo to visit the historic Carrowmore Megalithic Cemetery, one of the largest and oldest megalithic cemeteries in Ireland, providing a glimpse into ancient history.\nDay 2:\n- Drive to Cavan and discover the Marble Arch Caves, a fascinating underground world of caves and rivers, perfect for an adventurous tour.\n- End your trip in Roscommon with a visit to the majestic King House, a historic Georgian mansion turned museum showcasing the region's rich history and culture.\n\nThis 2-day trip offers a perfect blend of natural beauty, history, and adventure, allowing you to explore diverse regions of Ireland while enjoying a moderate-paced itinerary. From exploring ancient ruins to cruising through underground caves, cycling through national parks, and visiting historic castles, this itinerary caters to a wide range of interests, making it a memorable and special travel experience.",
   "days": [
     {
       "day_number": 1,
-      "day_summary": "Start your day with a peaceful walk through the Jenkinstown Wood Loop, a scenic forest trail with ancient trees and wildlife. Allow 1-2 hours for this activity.\n\nNext, visit the Edmund Rice Heritage Centre in Waterford to learn about the life and work of the founder of the Christian Brothers. Spend about 1-2 hours exploring the exhibits.\n\nFor lunch, head to Ionad Cois Locha in Gweedore, a charming lakeside cafe serving delicious local cuisine. Plan for a 1-1.5 hour stop.\n\nEnd your day with a visit to the majestic Doe Castle in Creeslough, a well-preserved fortress with stunning views of Sheephaven Bay. Allocate 1-2 hours for a tour of the castle and its grounds.\n\nTravel tip: Make sure to wear comfortable walking shoes for the forest trail and castle visit. Consider renting a car for easier transportation between these locations. Start your day early to make the most of your time.",
+      "day_summary": "Start your day by exploring Dun na Rí Forest Park, known for its serene walking trails and ancient ruins. Spend the morning wandering through the lush greenery and enjoying the peaceful surroundings.\n\nIn the afternoon, head to Ionad Cois Locha, a charming lakeside center offering boat trips and water activities. You can relax by the lake, go for a boat ride, or explore the surrounding area.\n\nTravel tip: Wear comfortable walking shoes for Dun na Rí Forest Park and bring a light jacket for changing weather by the lake.\n\nSuggested timing: \n- Morning: Dun na Rí Forest Park\n- Afternoon: Ionad Cois Locha",
       "activities": [
         {
-          "name": "Jenkinstown Wood Loop",
-          "location": "Kilkenny City, Kilkenny",
-          "description": "Nestled in Kilkenny City, the Jenkinstown Wood Loop offers a serene escape into nature. This enchanting walking trail winds through lush woodlands, revealing captivating natural beauty at every turn. Visitors can immerse themselves in the tranquil surroundings, spotting diverse flora and fauna along the way.\n\nThis scenic loop also holds historical significance, with remnants of an old estate adding a touch of intrigue to the experience. As you stroll through the peaceful forest, you can almost feel the echoes of the past whispering through the trees.\n\nFor a truly immersive experience, make sure to bring sturdy walking shoes and a camera to capture the beauty of Jenkinstown Wood. Whether you're a nature enthusiast, a history buff, or simply seeking a peaceful retreat, this hidden gem in Kilkenny promises a memorable adventure.",
+          "name": "Dun na Rí Forest Park",
+          "location": "Kingscourt, Cavan",
+          "description": "Nestled in the charming town of Kingscourt in Cavan, Ireland, Dun na Rí Forest Park is a haven for nature lovers and outdoor enthusiasts. This enchanting forest park offers picturesque walking trails through ancient woodlands, providing a peaceful escape from the hustle and bustle of modern life. Visitors can immerse themselves in the beauty of nature, surrounded by lush greenery and the soothing sounds of the forest.\n\nPractical tip: Don't forget to wear comfortable walking shoes and bring along some snacks and water to fully enjoy your stroll through Dun na Rí Forest Park.",
           "timing": "09:00 - 11:00"
-        },
-        {
-          "name": "Edmund Rice Heritage Centre",
-          "location": ", Kilkenny",
-          "description": "Located in Kilkenny, Ireland, the Edmund Rice Heritage Centre is a special place that showcases the life and legacy of Edmund Rice, the founder of the Christian and Presentation Brothers. Visitors can explore the historic house and museum to learn about Rice's contributions to education and his dedication to helping the poor and marginalized. The center offers a glimpse into Irish history and culture, highlighting the impact of Rice's work on society. A practical tip for visitors is to join a guided tour to fully appreciate the significance of this historical site.",
-          "timing": "11:30 - 13:30"
         },
         {
           "name": "Ionad Cois Locha",
           "location": "Letterkenny, Donegal",
-          "description": "Welcome to Ionad Cois Locha in Letterkenny, Donegal - a place where craft, culture, and outdoor activities converge beautifully. What makes this spot special is its serene lakeside setting, offering a perfect blend of relaxation and adventure.\n\nVisitors can enjoy kayaking or cruising on the lake, explore the craft workshops, take a leisurely walk, or visit the museum and attractions on-site. The café serves up delicious local fare, making it a great spot to refuel.\n\nWith a rich history rooted in traditional Irish crafts and activities, Ionad Cois Locha offers a glimpse into the cultural heritage of the region.\n\nPractical tip: Don't forget to check the activity schedule in advance and dress appropriately for outdoor adventures.",
-          "timing": "14:00 - 16:00"
+          "description": "Welcome to Ionad Cois Locha in Letterkenny, Donegal! This charming spot offers a mix of activities including shopping for crafts, cruising on the lake, kayaking, and guided walking tours. Explore the museum and attractions, then relax at the café with delicious food and drinks. Don't miss the chance to take a boat tour for a unique perspective of the area. Practical tip: Check the weather forecast before your visit to plan your outdoor activities accordingly.",
+          "timing": "11:30 - 13:30"
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "day_summary": "Start your day by exploring the ancient ruins of Rinn Duin Castle Loop, known for its picturesque setting and historical significance. Allow 1-2 hours for a leisurely visit and taking in the views.\n\nAfterward, head to the dramatic Gleniff Horseshoe, a stunning valley surrounded by towering cliffs and lush greenery. Plan for a scenic drive or hike around the area, allowing 2-3 hours to fully appreciate the natural beauty.\n\nTravel tip: Wear comfortable walking shoes and dress in layers, as weather conditions in Ireland can change quickly. Bring a camera to capture the breathtaking landscapes.\n\nOverall suggested timing: Start your day early to make the most of your visit to both Rinn Duin Castle Loop and Gleniff Horseshoe, allowing for a full day of exploration and relaxation in the Irish countryside.",
+      "activities": [
+        {
+          "name": "Rinn Duin Castle Loop",
+          "location": ", Roscommon",
+          "description": "Step back in time as you explore the enchanting Rinn Duin Castle Loop in Roscommon, Ireland. This walking trail takes you through the picturesque countryside to the haunting ruins of Rinn Duin Castle, a historic gem shrouded in mystery and stories of the past. Take a leisurely stroll and immerse yourself in the rich history of this ancient site. Don't forget to wear comfortable walking shoes and bring along a camera to capture the beauty of the ruins and the surrounding landscape.",
+          "timing": "09:00 - 11:00"
         },
         {
-          "name": "Doe Castle",
-          "location": ", Donegal",
-          "description": "Nestled in the stunning Donegal landscape, Doe Castle exudes an air of mystery and history. This 15th-century stronghold boasts a unique triangular shape and picturesque setting overlooking Sheephaven Bay. Visitors can explore the castle's well-preserved ruins, including its impressive stone walls and strategic battlements, offering a glimpse into Ireland's medieval past. With its intriguing history of clan warfare and political intrigue, Doe Castle is a must-visit for history buffs and castle enthusiasts. A practical tip for visitors: Wear sturdy shoes for exploring the castle grounds and be prepared for some uneven terrain.",
-          "timing": "16:30 - 18:30"
+          "name": "Gleniff Horseshoe",
+          "location": ", Sligo",
+          "description": "Nestled in the picturesque county of Sligo, Ireland, the Gleniff Horseshoe offers a stunning natural landscape perfect for cycling and walking enthusiasts. This horseshoe-shaped valley is surrounded by majestic mountains, providing a peaceful retreat for outdoor lovers. A practical tip for visitors: Dress in layers as the weather can change quickly in this area.",
+          "timing": "11:30 - 13:30"
         }
       ]
     }
   ],
-  "general_tips": "1. General Travel Tips:\n- Given the extensive list of regions to cover in just one day, it's essential to plan your itinerary carefully to make the most of your time.\n- Prioritize your interests and select key locations to visit in each region to avoid feeling rushed.\n- Embrace the local culture and engage with the friendly locals to enhance your travel experience.\n\n2. Logistics Advice:\n- Utilize public transportation options such as buses or trains to navigate between regions efficiently. Plan your route in advance and check schedules to avoid any delays.\n- Consider renting a car for more flexibility and to explore remote areas not easily accessible by public transport.\n- Make use of travel apps or maps to navigate your way through the different regions seamlessly.\n\n3. Time Management Suggestions:\n- Start your day early to maximize your time exploring the various locations. Consider visiting one major attraction in each region to get a taste of its unique offerings.\n- Allocate sufficient time for travel between regions, taking into account potential traffic or delays.\n- Factor in time for meals and breaks to recharge and savor the local cuisine.\n\n4. Weather and Packing Recommendations:\n- Ireland's weather can be unpredictable, so it's advisable to dress in layers and pack a waterproof jacket or umbrella.\n- Comfortable walking shoes are essential, especially if you plan to explore national parks or embark on walking tours.\n- Don't forget essentials like a camera, sunscreen, and a refillable water bottle to stay hydrated throughout your journey.\n\nBy following these travel tips and recommendations, you can make the most of your one-day itinerary covering multiple regions in Ireland while enjoying the diverse landscapes and cultural experiences each place has to offer.",
+  "general_tips": "1. General Travel Tips:\n- Ireland is known for its unpredictable weather, so be prepared for rain and pack layers.\n- Respect local customs and traditions, and be friendly to the locals who are known for their hospitality.\n- Carry some cash as not all places may accept credit cards, especially in rural areas.\n- Remember to drive on the left side of the road if you are renting a car.\n- Make sure to book accommodations in advance, especially during peak tourist seasons.\n\n2. Logistics Advice:\n- Since you are covering a lot of regions in just 2 days, it is essential to plan your route efficiently to minimize driving time.\n- Use GPS or a map to navigate as some rural areas may have limited or no cell service.\n- Fill up your gas tank whenever you see a petrol station, as some remote areas may have long stretches without one.\n- Check the opening hours of attractions and plan your visit accordingly.\n\n3. Time Management Suggestions:\n- Prioritize the locations you want to visit based on your special interests and allocate more time for those attractions.\n- Plan your itinerary with a balance of driving time and sightseeing time to avoid feeling rushed.\n- Consider waking up early to make the most of your day and to avoid crowds at popular tourist spots.\n- Factor in time for meals and breaks to rest and rejuvenate during your fast-paced itinerary.\n\n4. Weather and Packing Recommendations:\n- Pack waterproof clothing, including a rain jacket and sturdy walking shoes, as you will likely encounter rain during your trip.\n- Bring a small umbrella or a poncho to stay dry while exploring outdoor attractions.\n- Don't forget to pack sunscreen and sunglasses, as the sun can be strong even on cloudy days.\n- Carry a backpack with essentials like water, snacks, a map, and a camera to capture the beautiful landscapes.\n\nBy following these travel tips and recommendations, you can make the most of your 2-day itinerary in Ireland, exploring a diverse range of regions and attractions while enjoying the country's natural beauty and rich history.",
   "interests_accuracy": {
-    "overall_accuracy": 33.33,
+    "overall_accuracy": 50.0,
     "accuracy_per_interest": {
-      "Walking": 50.0,
-      "Historic Houses and Castle": 50.0,
-      "National and Forest Park": 0.0
+      "Walking": 100.0,
+      "Historic Houses and Castle": 25.0,
+      "National and Forest Park": 25.0
     },
     "total_pois": 4,
-    "matches_found": 4,
+    "matches_found": 6,
     "interest_matches": {
-      "Walking": 2,
-      "Historic Houses and Castle": 2,
-      "National and Forest Park": 0
+      "Walking": 4,
+      "Historic Houses and Castle": 1,
+      "National and Forest Park": 1
     },
     "interests_usage": {
-      "used": 2,
+      "used": 3,
       "total": 3,
-      "percentage": 66.67
+      "percentage": 100.0
     }
   }
 }

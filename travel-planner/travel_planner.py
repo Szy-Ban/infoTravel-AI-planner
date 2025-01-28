@@ -89,25 +89,57 @@ class TravelPlanner:
         return plan
 
     def _organize_days(self, pois: List[Dict], preferences: UserPreferences) -> List[List[Dict]]:
-        # Organize POIs into days using OpenAI for optimization
-        poi_info = []
+        # Organize POIs into days using OpenAI for optimization"
+
+        filtered_pois = []
         for poi in pois:
+            poi_tags = poi['Tags'].lower().split(',')
+            poi_tags = [tag.strip() for tag in poi_tags]
+
+            # Check if POI matches any user interest
+            if any(interest.lower() in tag for interest in preferences.interests
+                   for tag in poi_tags):
+                filtered_pois.append(poi)
+
+        # If we don't have enough POIs, use original list
+        if len(filtered_pois) < preferences.trip_duration * preferences.realization_of_pois_per_day:
+            filtered_pois = pois
+
+        # Prepare POI information for the prompt
+        poi_info = []
+        for poi in filtered_pois:
+            tags = poi['Tags'].split(',')
+            matching_interests = [
+                interest for interest in preferences.interests
+                if any(interest.lower() in tag.lower() for tag in tags)
+            ]
             info = f"- {poi['Name']} ({poi['AddressRegion']})"
-            if 'Tags' in poi:
-                info += f" - Types: {poi['Tags']}"
+            if matching_interests:
+                info += f" [Matches interests: {', '.join(matching_interests)}]"
             poi_info.append(info)
 
         prompt = f"""
-        Help organize these points of interest into {preferences.trip_duration} days of travel.
-        Consider:
-        - {preferences.realization_of_pois_per_day} activities per day
-        - Transportation by {preferences.preferred_transportation}
-        - {preferences.preferred_pace} pace
+        Create a {preferences.trip_duration}-day travel plan with EXACTLY {preferences.realization_of_pois_per_day} activities per day.
 
-        Points of Interest:
+        User interests: {', '.join(preferences.interests)}
+        Transportation: {preferences.preferred_transportation}
+        Pace: {preferences.preferred_pace}
+
+        Requirements:
+        1. MUST include EXACTLY {preferences.realization_of_pois_per_day} activities per day
+        2. MUST be organized into EXACTLY {preferences.trip_duration} days
+        3. Prioritize POIs that match user interests
+        4. Consider geographical proximity for efficient travel
+        5. Each day should be logistically feasible given the transportation method
+
+        Available Points of Interest:
         {chr(10).join(poi_info)}
 
-        Group the POIs by day, considering geographical proximity and logical flow.
+        Format your response as:
+        Day 1:
+        - [POI name exactly as provided]
+        - [POI name exactly as provided]
+        (etc. for each day)
         """
 
         try:
@@ -115,7 +147,7 @@ class TravelPlanner:
                 model=GPT_MODEL,
                 messages=[
                     {"role": "system",
-                     "content": "You are a travel planning assistant organizing points of interest into optimal daily itineraries."},
+                     "content": "You are a travel planning assistant that creates precise itineraries matching user requirements exactly."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=MAX_TOKENS,
@@ -124,11 +156,49 @@ class TravelPlanner:
 
             # Process the response to extract organized days
             organized_text = response.choices[0].message.content
-            return self._parse_organized_days(organized_text, pois)
+            organized_days = self._parse_organized_days(organized_text, filtered_pois)
+
+            # Validate the organization
+            if len(organized_days) != preferences.trip_duration:
+                print("Warning: AI response didn't match required days, using fallback method")
+                return self._simple_day_organization(filtered_pois, preferences)
+
+            for day_pois in organized_days:
+                if len(day_pois) != preferences.realization_of_pois_per_day:
+                    print("Warning: AI response didn't match required activities per day, using fallback method")
+                    return self._simple_day_organization(filtered_pois, preferences)
+
+            return organized_days
+
         except Exception as e:
             print(f"Error organizing days: {str(e)}")
-            # Division into days
-            return self._simple_day_organization(pois, preferences.trip_duration)
+            return self._simple_day_organization(filtered_pois, preferences)
+
+    def _simple_day_organization(self, pois: List[Dict], preferences: UserPreferences) -> List[List[Dict]]:
+
+        # Sort POIs by how well they match user interests
+        def interest_score(poi):
+            poi_tags = poi['Tags'].lower().split(',')
+            poi_tags = [tag.strip() for tag in poi_tags]
+            return sum(1 for interest in preferences.interests
+                       if any(interest.lower() in tag for tag in poi_tags))
+
+        sorted_pois = sorted(pois, key=interest_score, reverse=True)
+
+        # Calculate total needed POIs
+        total_needed = preferences.trip_duration * preferences.realization_of_pois_per_day
+
+        # Take only needed number of POIs
+        selected_pois = sorted_pois[:total_needed]
+
+        # Organize into days
+        organized_days = []
+        for i in range(0, total_needed, preferences.realization_of_pois_per_day):
+            day_pois = selected_pois[i:i + preferences.realization_of_pois_per_day]
+            if day_pois:  # Only add non-empty days
+                organized_days.append(day_pois)
+
+        return organized_days
 
     def _parse_organized_days(self, organized_text: str, pois: List[Dict]) -> List[List[Dict]]:
 
