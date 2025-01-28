@@ -131,6 +131,7 @@ class TravelPlanner:
         3. Prioritize POIs that match user interests
         4. Consider geographical proximity for efficient travel
         5. Each day should be logistically feasible given the transportation method
+        6. Emphasize the use of each user {preferences.interests}. If possible, try to use each of them at least once.
 
         Available Points of Interest:
         {chr(10).join(poi_info)}

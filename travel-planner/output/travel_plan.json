@@ -1,65 +1,183 @@
 {
-  "trip_summary": "Day 1:\n- Morning: Start your day in Cavan by visiting the historic Crom Castle. Explore the castle grounds, take a guided tour, and learn about its fascinating history and architecture.\n- Midday: Drive to Donegal and embark on a scenic cruise along the rugged coastline. Enjoy breathtaking views of the cliffs and sea, perfect for photography enthusiasts.\n- Afternoon: Head to Donegal town and visit Donegal Castle, a well-preserved medieval fortress. Stroll through the castle grounds and learn about its significance in Irish history.\n- Evening: Relax and unwind at a cozy cafe in Donegal town, sampling delicious local treats and soaking in the charming atmosphere.\n\nDay 2:\n- Morning: Drive to County Mayo and spend the morning exploring Westport House and Gardens. Marvel at the stunning landscape, cycle through the grounds, and enjoy a leisurely walk in the park.\n- Midday: Visit the National Museum of Ireland - Country Life in Mayo, where you can delve into the region's cultural heritage and traditions. Engage in interactive exhibits and learn about rural Irish life.\n- Afternoon: Travel to County Kerry and discover the beauty of Killarney National Park. Take a boat ride on the lakes, go bird watching, or enjoy angling in the serene surroundings.\n- Evening: End your trip with some shopping in Killarney, where you can find unique souvenirs and local crafts to take home.\n\nThis itinerary is special because it offers a diverse range of experiences that cater to different interests, from history and culture to nature and wildlife. Driving through scenic routes allows you to soak in the beauty of Ireland's countryside at a moderate pace, making it a relaxing and enjoyable trip. The mix of iconic landmarks, outdoor activities, and culinary delights ensures a memorable 2-day adventure in Ireland.",
+  "trip_summary": "Embark on a 6-day adventure through the diverse landscapes and rich heritage of Ireland, exploring 18 captivating points of interest across various regions:\n\nDay 1-2: Cavan & Galway\n- Start your journey in Cavan with a visit to the swimming pools and water park for a refreshing start.\n- Explore the museums and attractions in Galway, known for its vibrant culture and history.\n- Highlight: Delve into the stunning gardens and forest park in Cavan, perfect for nature enthusiasts.\n\nDay 3: Clare & Wexford\n- Head to Clare for a day of nature and wildlife experiences, including kayaking along its picturesque rivers.\n- Discover the ruins, abbeys, and monasteries in Wexford, steeped in ancient history.\n- Highlight: Be enchanted by the Zoos and Aquarium in Clare, offering a glimpse into Ireland's diverse marine life.\n\nDay 4: Tipperary & Longford\n- Visit a monastery in Tipperary and engage in a serene retreat.\n- Experience the beauty of Wicklow's national and forest park, perfect for outdoor enthusiasts.\n- Highlight: Discover historic houses and castles in Longford, showcasing Ireland's architectural splendor.\n\nDay 5: Laois & Donegal\n- Immerse yourself in the serene landscapes of Laois and embrace the tranquility of its national park.\n- Delve into the local food shops and cafes in Donegal, savoring authentic Irish cuisine.\n- Highlight: Trace your ancestors in Donegal, a unique opportunity to connect with your Irish roots.\n\nDay 6: Roscommon\n- Spend the day bird watching and cruising along the scenic waterways of Roscommon.\n- Engage in photography and agriculture activities, capturing the essence of rural Ireland.\n- Highlight: Experience horse riding and craft workshops in Roscommon, offering a hands-on cultural experience.\n\nThis itinerary stands out for its diverse range of activities, from historical exploration to outdoor adventures, all while traveling at a moderate pace. The blend of cultural immersion, natural beauty, and heritage sites makes this trip to Ireland truly special, offering a well-rounded experience for every traveler.",
   "days": [
     {
       "day_number": 1,
-      "day_summary": "Start your day with a visit to Dun na Rí Forest Park, a peaceful woodland with scenic walking trails and the ruins of an ancient castle. Spend about 2-3 hours exploring the park's natural beauty and history.\n\nNext, head to Tropical World, a vibrant indoor tropical garden featuring exotic plants and animals. Allow 1-2 hours to enjoy the lush surroundings and observe the fascinating creatures.\n\nTravel tip: Wear comfortable shoes for walking in the forest park and bring a camera to capture the beauty of the surroundings. Consider packing a picnic lunch to enjoy in the park.\n\nOverall suggested timing: Plan for a full day of exploration, starting in the morning and finishing in the late afternoon to make the most of your visit to these two unique attractions.",
+      "day_summary": "Start your day with a visit to Dun na Rí Forest Park, a beautiful natural setting perfect for a morning stroll. Spend 1-2 hours exploring the trails and enjoying the peaceful surroundings. \n\nNext, head to Tropical World for a unique experience with exotic plants and animals. Plan to spend 1-2 hours here marveling at the colorful displays and learning about tropical ecosystems.\n\nFinish your day at Ionad Cois Locha, a cultural center showcasing local history and heritage. Spend 1-2 hours exploring the exhibits and enjoying the scenic views of the lake.\n\nTravel tip: Wear comfortable shoes for walking in the forest park and bring a camera to capture the tropical plants and animals at Tropical World. Consider packing a picnic lunch to enjoy by the lake at Ionad Cois Locha.\n\nOverall suggested timing: 5-6 hours for all three locations.",
       "activities": [
         {
           "name": "Dun na Rí Forest Park",
           "location": "Kingscourt, Cavan",
-          "description": "Explore the enchanting Dun na Rí Forest Park in Kingscourt, Cavan, Ireland, a haven for nature lovers and outdoor enthusiasts. Wander through ancient woodlands, follow scenic forest trails, and immerse yourself in the peaceful beauty of this national park. Keep an eye out for native wildlife and take in the fresh air as you meander through this picturesque setting. Practical tip: Don't forget to wear comfortable walking shoes for your adventure in Dun na Rí Forest Park.",
+          "description": "Explore the enchanting Dun na Rí Forest Park in Kingscourt, Cavan, Ireland. This picturesque park offers serene forest walks, a rich variety of wildlife, and stunning natural beauty. Don't miss the opportunity to immerse yourself in nature and unwind amidst the peaceful surroundings. A practical tip for visitors: Wear comfortable walking shoes to fully enjoy the trails and take in the tranquil atmosphere of this hidden gem.",
           "timing": "09:00 - 11:00"
         },
         {
           "name": "Tropical World",
           "location": "Letterkenny, Donegal",
-          "description": "Welcome to Tropical World in Letterkenny, Donegal, a haven for nature enthusiasts and bird watchers. Immerse yourself in the vibrant colors and sounds of exotic birds and wildlife. This unique attraction offers a delightful mix of animal encounters, shopping opportunities, and a cozy cafe to unwind in. Don't miss the chance to explore this tropical oasis in the heart of Ireland.\n\nPractical Tip: Be sure to check the feeding times for the animals and birds to make the most of your visit.",
+          "description": "Welcome to Tropical World in Letterkenny, Donegal! Immerse yourself in a vibrant world of exotic birds, fascinating wildlife, and lush tropical plants. Explore the diverse habitats, from rainforests to deserts, and be captivated by the colorful array of feathered friends around you. After your exploration, relax at the on-site cafe or browse the selection of unique food and gift items at the shops. Don't miss the chance to join a guided tour for an in-depth look at the wonders of Tropical World.\n\nPractical Tip: To make the most of your visit, consider bringing a pair of binoculars for optimal bird watching and wildlife-spotting opportunities.",
           "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "Ionad Cois Locha",
+          "location": "Letterkenny, Donegal",
+          "description": "Welcome to Ionad Cois Locha in Letterkenny, Donegal! This charming spot offers a delightful blend of craft shopping, kayaking, walking trails, and a museum all set against the picturesque backdrop of the lake. Take a leisurely cruise, explore local crafts, or simply unwind at the cafe with a warm cup of tea. Don't miss the opportunity to try some traditional Irish dishes at the onsite restaurant. Practical tip: Check the weather forecast and dress appropriately for outdoor activities. Enjoy your visit!",
+          "timing": "14:00 - 16:00"
         }
       ]
     },
     {
       "day_number": 2,
-      "day_summary": "Start your day by visiting Ross Castle in Killarney National Park. Explore the historic 15th-century castle and enjoy the scenic views of Lough Leane. Allow around 1-2 hours for your visit.\n\nNext, head to Rockfleet Castle near Newport. This 16th-century tower house is steeped in history and offers a glimpse into Ireland's past. Plan to spend about 1 hour exploring the castle and its surroundings.\n\nFor travel tips, consider renting a car to easily navigate between these two locations. Aim to start early in the morning to make the most of your day and avoid crowds. Pack comfortable walking shoes and dress for the weather, as you'll be exploring outdoor sites.\n\nOverall, this day of exploring two captivating castles in Ireland offers a mix of history and natural beauty, making it a memorable experience for any traveler.",
+      "day_summary": "Start your day with a scenic walk at Glenbarrow Eco Walk, a beautiful spot for nature lovers. Spend 1-2 hours exploring the picturesque surroundings.\n\nNext, head to Donaghmore Famine Workhouse Museum to learn about Ireland's history. Plan to spend around 1-2 hours here.\n\nFor the afternoon, drive to the Slieve Bloom Mountains for stunning views and outdoor activities like hiking or cycling. Aim to spend 2-3 hours exploring the area.\n\nTravel tip: Wear comfortable walking shoes and pack some snacks and water for the day. It's recommended to start early to make the most of your time at each location.",
       "activities": [
         {
-          "name": "Ross Castle",
-          "location": "Killarney, Kerry",
-          "description": "Ross Castle is a stunning 15th-century tower house situated on the shores of Lough Leane in Killarney, Kerry. This well-preserved castle offers a glimpse into Ireland's medieval past and provides a picturesque backdrop for visitors interested in history and photography. Explore the castle grounds, enjoy a leisurely boat tour on the lake, or take a scenic walk in the nearby Killarney National Park. Don't forget to bring comfortable walking shoes, as the terrain around the castle can be uneven. Ross Castle is a must-visit destination for those seeking a blend of history and natural beauty in Ireland.",
+          "name": "Glenbarrow Eco Walk",
+          "location": ", Laois",
+          "description": "Nestled in the stunning Laois countryside, the Glenbarrow Eco Walk offers nature lovers a tranquil escape into the heart of Ireland's natural beauty. This walking trail winds through lush forests, beside babbling streams, and past picturesque waterfalls, providing a peaceful retreat for hikers of all levels. A practical tip for visitors: Wear sturdy footwear to navigate the varied terrain and fully immerse yourself in this enchanting eco walk.",
           "timing": "09:00 - 11:00"
         },
         {
-          "name": "Rockfleet Castle",
-          "location": ", Mayo",
-          "description": "Rockfleet Castle, nestled in County Mayo, Ireland, is a captivating medieval fortress with a rich history. Once the stronghold of the infamous pirate queen Grace O'Malley, this picturesque castle offers a glimpse into Ireland's past. Visitors can explore the well-preserved ruins and imagine life within its sturdy walls centuries ago. Don't forget to bring a camera to capture the stunning views of the surrounding countryside from the castle grounds.",
+          "name": "Donaghmore Famine Workhouse Museum",
+          "location": "Donaghmore, Laois",
+          "description": "Explore the haunting history of the Great Irish Famine at the Donaghmore Famine Workhouse Museum in Laois. Step inside the preserved workhouse buildings to gain insight into the harsh realities faced by those affected by the famine. Learn about the workhouse system and its impact on Irish society. Don't miss the opportunity to capture poignant moments through photography. Practical tip: Wear comfortable shoes for exploring the museum grounds.",
           "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "Slieve Bloom Mountains",
+          "location": ", Laois",
+          "description": "Explore the breathtaking beauty of the Slieve Bloom Mountains in Laois, Ireland. This natural landscape is perfect for walking enthusiasts, offering stunning views and peaceful surroundings. A practical tip for visitors: Make sure to wear sturdy footwear and bring plenty of water to fully enjoy your hike through this picturesque mountain range.",
+          "timing": "14:00 - 16:00"
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "day_summary": "Start your day by exploring the tranquil Newcastle Woods, a peaceful forest with walking trails and scenic views. Spend about 1-2 hours here enjoying nature and taking a leisurely stroll.\n\nNext, head to the Ballinamuck Visitor Centre to learn about the historic Battle of Ballinamuck and its significance in Irish history. Plan to spend around 1-2 hours at the visitor center immersing yourself in the local history.\n\nFinish your day at Carrickabraghey Castle, a picturesque castle ruin overlooking the sea. Explore the castle grounds and take in the stunning views. Allocate about 1 hour for this visit.\n\nFor timing, consider starting your day early to make the most of your time at each location. It's recommended to have a car for this itinerary to easily travel between the sites. Don't forget to pack snacks, water, and comfortable walking shoes for your day of exploration.",
+      "activities": [
+        {
+          "name": "Newcastle Woods",
+          "location": ", Longford",
+          "description": "Nestled in County Longford, Ireland, Newcastle Woods is a serene haven for nature lovers and hikers alike. With its lush greenery and winding trails, this picturesque woodland offers a peaceful escape from the hustle and bustle of everyday life. Visitors can explore the diverse flora and fauna that call this enchanting forest home, making it a perfect destination for a leisurely walk or a refreshing hike.\n\nPractical tip: Don't forget to wear sturdy walking shoes and bring along some insect repellent to fully enjoy your time in Newcastle Woods.",
+          "timing": "09:00 - 11:00"
+        },
+        {
+          "name": "Ballinamuck Visitor Centre",
+          "location": "Ballinamuck, Longford",
+          "description": "Ballinamuck Visitor Centre in Longford, Ireland, offers a fascinating glimpse into the area's history, particularly focusing on the Battle of Ballinamuck in 1798. Housed in a historic building, the center features exhibits and artifacts that bring this significant event to life. Visitors can immerse themselves in the past and gain a deeper understanding of Ireland's rich heritage. Practical tip: Check the opening hours before your visit to ensure you have enough time to explore all the exhibits.",
+          "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "Carrickabraghey Castle",
+          "location": ", Donegal",
+          "description": "Carrickabraghey Castle in Donegal, Ireland, stands as a majestic ruin steeped in history and mystery. The castle's weathered stone walls whisper tales of ancient battles and noble residents, offering a glimpse into Ireland's past. Visitors can explore the castle grounds, imagining life within its once grand halls. A practical tip for visitors: Wear sturdy footwear to navigate the uneven terrain around the castle ruins.",
+          "timing": "14:00 - 16:00"
+        }
+      ]
+    },
+    {
+      "day_number": 4,
+      "day_summary": "Start your day by exploring the picturesque Rinn Duin Castle Loop, immersing yourself in history and stunning views. Spend about 1-2 hours here.\n\nNext, head to Nenagh Heritage Centre & North Tipperary Genealogy to delve into the region's rich heritage and learn about your own roots. Allocate around 1-2 hours for this visit.\n\nWrap up your day by visiting the Famine Warhouse 1848 to gain insight into Ireland's past and the impact of the Great Famine. Plan to spend about 1 hour here.\n\nTravel tip: Wear comfortable shoes for exploring the castle loop and allocate extra time for travel between locations. Consider starting early in the day to make the most of your time.",
+      "activities": [
+        {
+          "name": "Rinn Duin Castle Loop",
+          "location": ", Roscommon",
+          "description": "Explore the ancient ruins of Rinn Duin Castle Loop in Roscommon, Ireland, a captivating blend of history and nature. Walk through the picturesque countryside while discovering the remnants of this medieval castle, offering a glimpse into Ireland's past. Don't forget to wear sturdy walking shoes to navigate the uneven terrain of this historic site.",
+          "timing": "09:00 - 11:00"
+        },
+        {
+          "name": "Nenagh Heritage Centre & North Tipperary Genealogy",
+          "location": "Nenagh, Tipperary",
+          "description": "Step back in time and uncover your Irish roots at the Nenagh Heritage Centre & North Tipperary Genealogy in Nenagh, Tipperary. This charming center offers a fascinating glimpse into local history, with a focus on helping visitors trace their ancestors through genealogy research. Explore historic houses and castles, browse through museums, and immerse yourself in the rich heritage of North Tipperary. Practical tip: Book a genealogy consultation in advance to make the most of your visit and uncover your family history.",
+          "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "Famine Warhouse 1848",
+          "location": "Ballingarry, Tipperary",
+          "description": "Step back in time at the Famine Warhouse 1848 in Ballingarry, Tipperary. This historic house turned museum offers a poignant glimpse into Ireland's past during the devastating famine of 1848. Learn about the struggles of the Irish people and the events that unfolded in this very place. A practical tip for visitors: check the museum's opening hours in advance to plan your visit accordingly.",
+          "timing": "14:00 - 16:00"
+        }
+      ]
+    },
+    {
+      "day_number": 5,
+      "day_summary": "Begin your day by exploring the medieval charm of Dunguaire Castle in Kinvara. Enjoy a guided tour of the castle and take in the stunning views of Galway Bay. \n\nNext, head to Dartfield Country Estate and Horse Museum in Loughrea. Learn about Ireland's equestrian heritage through interactive exhibits and perhaps even take a horseback ride through the beautiful countryside.\n\nFinish off your day with a visit to Bishop's Quarter, a scenic coastal area near Ballyvaughan. Take a leisurely walk along the cliffs and enjoy the breathtaking views of the Atlantic Ocean.\n\nTravel tip: Start your day early to make the most of your time at each location. Consider spending about 1-2 hours at Dunguaire Castle, 2-3 hours at Dartfield Country Estate, and 1-2 hours at Bishop's Quarter. Don't forget to pack comfortable walking shoes and dress appropriately for the changing Irish weather.",
+      "activities": [
+        {
+          "name": "Dunguaire Castle",
+          "location": ", Galway",
+          "description": "Perched on the shores of Galway Bay, Dunguaire Castle is a majestic medieval fortress that offers a captivating blend of history and stunning views. This well-preserved castle hosts medieval banquets, where guests can immerse themselves in the ambiance of times past while enjoying traditional Irish cuisine and entertainment. Don't miss the opportunity to explore the castle grounds and take in the panoramic vistas of the bay. A practical tip for visitors: Be sure to book your medieval banquet experience in advance to secure your spot at this popular attraction.",
+          "timing": "09:00 - 11:00"
+        },
+        {
+          "name": "Dartfield Country Estate and Horse Museum",
+          "location": "Kilreekill, Galway",
+          "description": "Discover the charm of Dartfield Country Estate and Horse Museum in Kilreekill, Galway. Immerse yourself in the rich agricultural history of Ireland, explore the stunning nature and wildlife surroundings, and experience the joy of horse riding and equestrian activities. Don't miss the opportunity to learn about Ireland's equine heritage at the museum. After a day of exploration, relax at the on-site cafe and browse the food shops for local treats. Practical tip: Book a horse riding session in advance to secure your spot and fully enjoy the estate's offerings.",
+          "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "Bishop's Quarter",
+          "location": "Ballyvaughan, Clare",
+          "description": "Nestled along the stunning coastline of Ballyvaughan in Clare, Bishop's Quarter is a hidden gem for those seeking a tranquil beach experience in Ireland. With its golden sands, crystal-clear waters, and breathtaking natural landscapes, this spot is perfect for a relaxing swim or a leisurely stroll along the shore. \n\nPractical tip: Don't forget to bring a picnic and some sunscreen to fully enjoy a day of sun, sea, and sand at Bishop's Quarter.",
+          "timing": "14:00 - 16:00"
+        }
+      ]
+    },
+    {
+      "day_number": 6,
+      "day_summary": "Start your day with a hike up Great Sugar Loaf Mountain for stunning panoramic views of the Wicklow Mountains. Allow 2-3 hours for the hike.\n\nNext, visit the peaceful ruins of Baltinglass Abbey, a historic monastery dating back to the 12th century. Spend about an hour exploring the site.\n\nFor a relaxing afternoon, head to Marlfield House & Gardens in Gorey. Enjoy a leisurely stroll through the beautiful gardens and maybe indulge in a high tea experience. Allocate 1-2 hours for this visit.\n\nTravel tip: Wear comfortable shoes for the hike up Great Sugar Loaf Mountain and consider bringing snacks and water. Make sure to check the opening hours of Baltinglass Abbey and Marlfield House in advance.\n\nOverall, this day itinerary allows you to experience the natural beauty, history, and tranquility of Ireland's countryside.",
+      "activities": [
+        {
+          "name": "Great Sugar Loaf Mountain",
+          "location": "Kilmacanogue, Wicklow",
+          "description": "Rising majestically near Kilmacanogue, the Great Sugar Loaf Mountain offers a rewarding hike through stunning natural landscapes. This iconic peak in County Wicklow is a favorite among outdoor enthusiasts for its panoramic views of the Irish countryside. Practical tip: Wear sturdy footwear and bring plenty of water for this invigorating trek.",
+          "timing": "09:00 - 11:00"
+        },
+        {
+          "name": "Baltinglass Abbey",
+          "location": "Baltinglass, Wicklow",
+          "description": "Nestled in the heart of Baltinglass, Wicklow, Baltinglass Abbey stands as a captivating symbol of Ireland's rich history. This ancient monastery, with its weathered ruins and peaceful atmosphere, offers visitors a glimpse into Ireland's past. Practical tip: Don't forget to bring a camera to capture the serene beauty of this historic site.",
+          "timing": "11:30 - 13:30"
+        },
+        {
+          "name": "Marlfield House & Gardens",
+          "location": "Gorey, Wexford",
+          "description": "Nestled in the charming town of Gorey in County Wexford, Marlfield House & Gardens is a hidden gem for nature lovers. These beautiful gardens are a perfect place to unwind and take a leisurely stroll amidst lush greenery, colorful blooms, and serene water features. Practical tip: Don't forget to bring a camera to capture the beauty of this tranquil oasis.",
+          "timing": "14:00 - 16:00"
         }
       ]
     }
   ],
-  "general_tips": "1. General Travel Tips:\n- Given the extensive list of locations to cover in just 2 days, it's essential to plan a realistic itinerary that allows for sufficient time at each stop while considering travel time between destinations.\n- Prioritize your must-see locations based on your special interests. Since you have a moderate pace, try not to cram too much into each day to avoid feeling rushed.\n- Make sure to check the opening hours and any admission fees for the attractions you plan to visit in advance to avoid any surprises.\n\n2. Logistics Advice:\n- Renting a car is a great choice for this itinerary as it provides flexibility and allows you to explore multiple regions easily. Make sure to book the car in advance and familiarize yourself with driving regulations in Ireland.\n- Consider using GPS or a navigation app on your phone to help you navigate between the various locations efficiently.\n- Plan your route in advance to minimize backtracking and optimize your time spent on the road.\n\n3. Time Management Suggestions:\n- Start your days early to make the most of your time. Consider having a basic breakfast in your accommodation or grabbing something on the go to get an early start.\n- Allocate specific time slots for each location based on their significance to you. Be realistic about how much time you need at each stop to fully enjoy the experience.\n- Factor in breaks for meals and rest to avoid exhaustion and ensure you can enjoy each location fully.\n\n4. Weather and Packing Recommendations:\n- Ireland's weather can be unpredictable, so it's advisable to pack layers and a waterproof jacket to be prepared for rain or sudden changes in temperature.\n- Comfortable walking shoes are a must, especially if you plan to explore parks, nature reserves, or historic sites with uneven terrain.\n- Don't forget essentials like sunscreen, sunglasses, and a hat, especially if you plan to spend time outdoors enjoying the natural landscapes.\n\nOverall, with proper planning, realistic expectations, and a focus on your special interests, you can make the most of your 2-day road trip through multiple regions of Ireland. Enjoy the diverse landscapes, historic sites, and cultural experiences that each location has to offer!",
+  "general_tips": "1. General Travel Tips:\n- Research and plan your itinerary in advance to make the most of your time in each location.\n- Purchase an Ireland Visitor SIM card or ensure your international roaming plan works in Ireland for easy communication and access to GPS.\n- Respect the local customs and traditions, and always greet people with a friendly \"hello\" or \"how are you?\".\n\n2. Logistics Advice:\n- Rent a car for the duration of your trip to have the flexibility to explore various regions at your own pace.\n- Make sure to have a detailed map or GPS navigation system as some areas may have limited cell phone reception.\n- Book accommodations in advance, especially during peak travel seasons, to ensure availability.\n\n3. Time Management Suggestions:\n- Allocate at least 1-2 days in each region to fully immerse yourself in the local culture, scenery, and activities.\n- Prioritize your must-see attractions and activities in each location to make the most of your time.\n- Factor in travel time between destinations and plan for rest stops or meals along the way.\n\n4. Weather and Packing Recommendations:\n- Pack layers of clothing as the weather in Ireland can be unpredictable, with rain showers and cool temperatures even in summer.\n- Bring comfortable walking shoes for exploring parks, forests, and historic sites.\n- Consider packing a waterproof jacket, umbrella, and sunscreen to be prepared for any weather conditions.",
   "interests_accuracy": {
-    "overall_accuracy": 40.0,
+    "overall_accuracy": 21.11,
     "accuracy_per_interest": {
-      "Public Park": 25.0,
-      "Nature and Wildlife": 50.0,
-      "Natural Landscape": 25.0,
-      "Castle": 50.0,
-      "Historic Houses and Castle": 50.0
+      "Walking": 44.44,
+      "Forest Park": 5.56,
+      "Park and Forest Walk": 5.56,
+      "National Park": 5.56,
+      "National and Forest Park": 5.56,
+      "Public Park": 5.56,
+      "Nature and Wildlife": 22.22,
+      "Natural Landscape": 27.78,
+      "Castle": 44.44,
+      "Historic Houses and Castle": 44.44
     },
-    "total_pois": 4,
-    "matches_found": 8,
+    "total_pois": 18,
+    "matches_found": 38,
     "interest_matches": {
+      "Walking": 8,
+      "Forest Park": 1,
+      "Park and Forest Walk": 1,
+      "National Park": 1,
+      "National and Forest Park": 1,
       "Public Park": 1,
-      "Nature and Wildlife": 2,
-      "Natural Landscape": 1,
-      "Castle": 2,
-      "Historic Houses and Castle": 2
+      "Nature and Wildlife": 4,
+      "Natural Landscape": 5,
+      "Castle": 8,
+      "Historic Houses and Castle": 8
     },
     "interests_usage": {
-      "used": 5,
-      "total": 5,
+      "used": 10,
+      "total": 10,
       "percentage": 100.0
     }
   }
