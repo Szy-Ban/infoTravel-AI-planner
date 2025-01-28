@@ -5,33 +5,29 @@ class ImageGenerator:
         self.client = OpenAI(api_key=api_key)
 
     def generate_trip_image(self, trip_summary: str) -> str:
-        """
-        Generates an AI image prompt based on trip summary and creates the image.
-        Returns the URL of the generated image.
-        """
-        prompt = f"Create a stunning and vibrant thumbnail for a trip to Ireland, based on a trip summary. The trip summary is: {trip_summary}."
+
+        # generate image prompt
+        prompt = f"Create a stunning and vibrant thumbnail for a trip to Ireland, based on a trip summary. You don't need to visualize all points of interest, instead try to pick up a general theme. \n The trip summary is: {trip_summary}."
 
         try:
-            # Wywołanie API do generowania obrazu
             response = self.client.images.generate(
-                model="dall-e-3",  # Użyj modelu DALL-E
+                model="dall-e-3",
                 prompt=prompt,
-                size="1024x1024",  # Rozdzielczość obrazu
-                quality="standard",  # Jakość
-                n=1  # Liczba obrazów
+                size="1024x1024",
+                quality="standard",
+                n=1
             )
 
-            # Zwracamy URL wygenerowanego obrazu
+            # return URL for gen. image
             return response.data[0].url
         except Exception as e:
             print(f"Error generating image: {str(e)}")
             return None
 
     def save_image_from_url(self, image_url: str, filename: str = "travel_poster.png") -> None:
-        """
-        Downloads and saves the image from the provided URL.
-        """
-        import requests  # Import wewnętrzny, aby unikać problemów z niezależnymi modułami
+
+        # Download and save the image
+        import requests
         try:
             print(f"Downloading image from {image_url}...")
             response = requests.get(image_url)
