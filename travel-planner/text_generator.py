@@ -14,19 +14,19 @@ from config import (
     OPENAI_4O_MINI_MODEL
 )
 
-# Domyślny model w Groq
 GROQ_DEFAULT_MODEL = "llama-3.3-70b-versatile"
+
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 
 class TextGenerator:
     def __init__(self):
         """
-        Obsługiwane wartości LLM_PROVIDER:
-         - "openai-3.5"    => GPT-3.5-turbo
-         - "openai-4"      => GPT-4
-         - "openai-4o-mini"=> GPT-4o-mini
-         - "huggingface"   => model HF
-         - "groq"          => Groq
+        LLM_PROVIDER can be one of:
+         - "openai-3.5"     => GPT-3.5-turbo
+         - "openai-4"       => GPT-4
+         - "openai-4o-mini" => GPT-4o-mini
+         - "huggingface"    => local HF model
+         - "groq"           => Groq LLM
         """
         self.provider = LLM_PROVIDER.lower()
 
@@ -69,6 +69,7 @@ class TextGenerator:
             raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER}")
 
     def generate_chat_completion(self, system_prompt: str, user_prompt: str) -> str:
+        # Text based on provider
         if self.provider in ("openai-3.5", "openai-4", "openai-4o-mini"):
             return self._generate_openai(system_prompt, user_prompt)
         elif self.provider == "huggingface":
@@ -140,6 +141,7 @@ class TextGenerator:
                 return data["choices"][0]["message"]["content"].strip()
 
             except requests.exceptions.HTTPError as http_err:
+                # If 429 rate limit, try again
                 if response.status_code == 429 and attempt < max_retries - 1:
                     print(f"[Groq Rate Limit] Attempt {attempt+1}/{max_retries} - waiting {backoff_seconds:.1f}s")
                     time.sleep(backoff_seconds)

@@ -3,6 +3,7 @@ from typing import Optional, List
 
 @dataclass
 class POI:
+    # POI data class
     name: str
     location: str
     short_description: str
@@ -10,7 +11,7 @@ class POI:
     image: str
     realization_of_interest_per_day: int = 2
     category: Optional[str] = None
-    visit_duration: Optional[int] = 120  # default 2 hours in minutes
+    visit_duration: Optional[int] = 120
     tags: Optional[List[str]] = None
     latitude: Optional[float] = None
     longitude: Optional[float] = None
@@ -25,12 +26,13 @@ class POI:
 
     @classmethod
     def from_json(cls, data: dict) -> 'POI':
+        # POI from JSON dictionary
         return cls(
             name=data['Name'],
             location=f"{data.get('AddressLocality', '')}, {data.get('AddressRegion', '')}",
-            short_description="",  # AI
-            full_description="",   # AI
-            image="",              # Placeholder
+            short_description="",
+            full_description="",
+            image="",
             category=next(iter(data.get('Tags', '').split(',')), None),
             tags=data.get('Tags', '').split(','),
             latitude=float(data.get('Latitude', 0)),
@@ -42,6 +44,7 @@ class POI:
         )
 
     def to_dict(self) -> dict:
+        # dictionary representation of the POI
         return {
             'name': self.name,
             'location': self.location,
@@ -66,6 +69,7 @@ class POI:
         }
 
     def estimate_visit_duration(self) -> int:
+        # How many minutes spent at this POI
         category_durations = {
             'Museum': 180,
             'Castle': 120,
@@ -83,6 +87,7 @@ class POI:
         return self.visit_duration
 
     def is_compatible_with_interests(self, interests: List[str]) -> bool:
+        # Check if the POI matches any of the user's stated interests
         if not interests:
             return True
         return any(

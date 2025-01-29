@@ -3,12 +3,13 @@ from typing import Dict, List
 from user_preferences import UserPreferences
 import math
 
-
 class POIManager:
     def __init__(self):
+        # List of all POIs from the JSON
         self.pois = []
 
     def load_and_filter_pois(self, file_path: str, preferences: UserPreferences) -> Dict:
+        # Loads POI JSON file and filter by user preferences
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 self.pois = json.load(f)
@@ -19,6 +20,7 @@ class POIManager:
         return self._organize_pois(filtered_pois)
 
     def _filter_pois(self, preferences: UserPreferences) -> List[Dict]:
+        # Filter POIs by region, interest, or special requirements
         filtered = self.pois.copy()
 
         if preferences.regions:
@@ -46,6 +48,7 @@ class POIManager:
         return filtered
 
     def _organize_pois(self, filtered_pois: List[Dict]) -> Dict:
+        # Group filtered POIs by region and category
         organized = {
             "total_count": len(filtered_pois),
             "by_region": {},
@@ -76,6 +79,7 @@ class POIManager:
 
     @staticmethod
     def calculate_distance(poi1: Dict, poi2: Dict) -> float:
+        # Distance between two POIs (haversine)
         lat1, lon1 = float(poi1['Latitude']), float(poi1['Longitude'])
         lat2, lon2 = float(poi2['Latitude']), float(poi2['Longitude'])
 

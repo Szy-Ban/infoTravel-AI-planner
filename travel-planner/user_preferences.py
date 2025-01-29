@@ -7,9 +7,9 @@ from config import (
     DEFAULT_END_TIME
 )
 
-
 @dataclass
 class UserPreferences:
+    # Stores all the user's preferences
     interests: List[str]
     trip_duration: int = DEFAULT_TRIP_DURATION
     realization_of_pois_per_day: int = DEFAULT_DAILY_ACTIVITIES
@@ -29,6 +29,7 @@ class UserPreferences:
             self.special_requirements = []
 
     def validate(self):
+        # Basic validations on preferences
         if not self.interests:
             raise ValueError("At least one interest must be specified")
 
@@ -47,6 +48,7 @@ class UserPreferences:
         return True
 
     def to_dict(self):
+        # Returns a dict to pass preferences to other modules
         return {
             "interests": self.interests,
             "trip_duration": self.trip_duration,

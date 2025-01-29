@@ -9,6 +9,7 @@ class TravelPlanner:
         self.description_generator = POIDescriptionGenerator(text_generator)
 
     def _calculate_interests_accuracy(self, organized_days: List[List[Dict]], interests: List[str]) -> dict:
+        # Evaluate how well the plan matches user interests
         interest_matches = {interest: 0 for interest in interests}
         total_pois = 0
 
@@ -21,6 +22,7 @@ class TravelPlanner:
                     if any(interest.lower() in tag for tag in poi_tags):
                         interest_matches[interest] += 1
 
+        # Per-interest percentages
         accuracy_per_interest = {}
         for interest, matches in interest_matches.items():
             percentage = (matches / total_pois * 100) if total_pois > 0 else 0
@@ -47,11 +49,14 @@ class TravelPlanner:
         }
 
     def generate_travel_plan(self, poi_data: Dict, preferences: UserPreferences) -> Dict:
+        # Organizes a multi-day trip
         all_pois = []
         for region_pois in poi_data["by_region"].values():
             all_pois.extend(region_pois)
 
+        # AI-based organization
         organized_days = self._organize_days(all_pois, preferences)
+        # How well the final plan matches user interests
         interests_accuracy = self._calculate_interests_accuracy(organized_days, preferences.interests)
 
         plan = {
@@ -63,6 +68,7 @@ class TravelPlanner:
             "interests_accuracy": interests_accuracy
         }
 
+        # Build day-by-day plan details
         for day_number, day_pois in enumerate(organized_days, 1):
             day_plan = self._create_day_plan(day_number, day_pois, preferences)
             plan["days"].append(day_plan)
@@ -70,6 +76,7 @@ class TravelPlanner:
         return plan
 
     def _organize_days(self, pois: List[Dict], preferences: UserPreferences) -> List[List[Dict]]:
+        # Create a day-by-day trip with EXACT number of POIs per day
         filtered_pois = []
         for poi in pois:
             poi_tags = poi['Tags'].lower().split(',')
@@ -123,10 +130,12 @@ class TravelPlanner:
         plan_text = self.description_generator.text_generator.generate_chat_completion(
             system_prompt, user_prompt
         )
+        # Text back into a list of days
         organized_days = self._parse_organized_days(plan_text, filtered_pois, preferences)
         return organized_days
 
     def _parse_organized_days(self, organized_text: str, pois: List[Dict], preferences: UserPreferences) -> List[List[Dict]]:
+        # LLM raw textual plan into a structured list of days
         organized_days = []
         current_day = []
 
@@ -136,10 +145,12 @@ class TravelPlanner:
             if not line:
                 continue
             if line.lower().startswith('day '):
+                # Start of a new day block
                 if current_day:
                     organized_days.append(current_day)
                 current_day = []
             else:
+                # Try to match a POI name in this line
                 matched_poi = None
                 for poi in pois:
                     if poi['Name'].lower() in line.lower():
@@ -152,17 +163,18 @@ class TravelPlanner:
             organized_days.append(current_day)
 
         if len(organized_days) != preferences.trip_duration:
-            print("Warning: AI response didn't match required day count. Using fallback method.")
+            # print("Warning: AI response didn't match required day count. Using fallback method.")
             return self._simple_day_organization(pois, preferences)
 
         for day_pois in organized_days:
             if len(day_pois) != preferences.realization_of_pois_per_day:
-                print("Warning: AI response didn't match required activities per day. Using fallback method.")
+                # print("Warning: AI response didn't match required activities per day. Using fallback method.")
                 return self._simple_day_organization(pois, preferences)
 
         return organized_days
 
     def _simple_day_organization(self, pois: List[Dict], preferences: UserPreferences) -> List[List[Dict]]:
+        # System if the AI doesn't comply with required day/activities
         def interest_score(poi):
             poi_tags = poi['Tags'].lower().split(',')
             poi_tags = [tag.strip() for tag in poi_tags]
@@ -181,12 +193,14 @@ class TravelPlanner:
         return organized_days
 
     def _create_day_plan(self, day_number: int, pois: List[Dict], preferences: UserPreferences) -> Dict:
+        # Summary and build a list of activities for each day
         day_summary = self.description_generator.generate_day_summary(pois)
         activities = []
         start_time = datetime.strptime(preferences.preferred_start_time, "%H:%M")
 
         for poi in pois:
             description = self.description_generator.generate_poi_description(poi)
+            # Each visit is 2h by default
             visit_duration = 120
             end_time = start_time + timedelta(minutes=visit_duration)
 
@@ -197,6 +211,7 @@ class TravelPlanner:
                 "timing": f"{start_time.strftime('%H:%M')} - {end_time.strftime('%H:%M')}"
             }
             activities.append(activity)
+            # 30 min break in between
             start_time = end_time + timedelta(minutes=30)
 
         return {
@@ -206,6 +221,7 @@ class TravelPlanner:
         }
 
     def _generate_trip_summary(self, organized_days: List[List[Dict]], preferences: UserPreferences) -> str:
+        # Summarize the entire trip
         total_pois = sum(len(day) for day in organized_days)
         regions = set()
         categories = set()

@@ -1,12 +1,12 @@
 import os
 import requests
 
-
 class ImageGenerator:
     def __init__(self, api_key: str):
         self.api_key = api_key
 
     def generate_trip_image(self, trip_summary: str, interests: list) -> str:
+        # interests into a comma-separated string
         interests_text = ", ".join(interests)
 
         original_prompt = (
@@ -18,6 +18,7 @@ class ImageGenerator:
             f"The trip summary is: {trip_summary}."
         )
 
+        # 1000-char limit for prompts
         MAX_PROMPT_LENGTH = 1000
         if len(original_prompt) > MAX_PROMPT_LENGTH:
             truncated_prompt = original_prompt[:MAX_PROMPT_LENGTH]

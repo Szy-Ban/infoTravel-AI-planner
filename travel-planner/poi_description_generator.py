@@ -1,12 +1,13 @@
 from typing import Dict, List
 from text_generator import TextGenerator
 
-
 class POIDescriptionGenerator:
     def __init__(self, text_generator: TextGenerator):
+        # Generate text for POI descriptions
         self.text_generator = text_generator
 
     def generate_poi_description(self, poi: Dict) -> str:
+        # Prompts for description of a specific POI
         system_prompt = (
             "You are a knowledgeable travel guide providing concise, engaging descriptions "
             "of points of interest in Ireland."
@@ -27,6 +28,7 @@ class POIDescriptionGenerator:
             return f"Description unavailable for {poi['Name']}"
 
     def generate_day_summary(self, pois: List[Dict]) -> str:
+        # Summarize a day
         system_prompt = (
             "You are a helpful travel planner creating concise day summaries for travelers in Ireland."
         )
@@ -43,6 +45,7 @@ class POIDescriptionGenerator:
             return "Day summary unavailable"
 
     def generate_itinerary_tips(self, preferences: Dict, pois: List[Dict]) -> str:
+        # Travel tips
         system_prompt = (
             "You are a knowledgeable travel advisor providing practical tips for traveling in Ireland."
         )

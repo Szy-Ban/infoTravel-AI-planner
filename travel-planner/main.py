@@ -43,6 +43,7 @@ def get_user_input():
         if i % 3 == 0:
             print()
 
+    # interests by index or range
     while True:
         try:
             interests_input = input("\nEnter numbers of your interests (e.g., 1,5,10 or 1-5): ").strip()
@@ -80,6 +81,7 @@ def get_user_input():
         except (ValueError, IndexError):
             print("Please enter valid numbers separated by commas or ranges (e.g., 1,5,10 or 1-5)")
 
+    # trip duration
     while True:
         try:
             duration = int(input("\nEnter trip duration (days, 1-14): "))
@@ -89,6 +91,7 @@ def get_user_input():
         except ValueError:
             print("Please enter a valid number.")
 
+    # activities per day
     while True:
         try:
             activities = int(input("Enter preferred number of activities per day (1-5): "))
@@ -98,29 +101,34 @@ def get_user_input():
         except ValueError:
             print("Please enter a valid number.")
 
+    # user-chosen regions (optional)
     print("\nAvailable regions in Ireland:")
     print("Dublin, Kerry, Galway, Cork, Clare, Donegal, Wicklow")
     regions = input("Enter preferred regions (comma-separated, or press Enter for all): ")
     regions = [r.strip() for r in regions.split(',')] if regions else []
 
+    # pace
     while True:
         pace = input("\nPreferred pace (slow/moderate/fast): ").lower()
         if pace in ['slow', 'moderate', 'fast']:
             break
         print("Please enter 'slow', 'moderate', or 'fast'.")
 
+    # transportation method
     while True:
         transport = input("Preferred transportation (car/public/walking): ").lower()
         if transport in ['car', 'public', 'walking']:
             break
         print("Please enter 'car', 'public', or 'walking'.")
 
+    # budget
     while True:
         budget = input("Budget level (low/moderate/high): ").lower()
         if budget in ['low', 'moderate', 'high']:
             break
         print("Please enter 'low', 'moderate', or 'high'.")
 
+    # UserPreferences object with all user inputs
     return UserPreferences(
         interests=selected_interests,
         trip_duration=duration,
@@ -197,11 +205,16 @@ def main():
         if not api_key:
             print("Warning: no OpenAI API key provided. Might fail with image generation.")
 
+        # text generator
         text_generator = TextGenerator()
+        # Create TravelPlanner
         planner = TravelPlanner(text_generator)
+        # Create POIManager
         poi_manager = POIManager()
+        # Create ImageGenerator
         image_generator = ImageGenerator(api_key)
 
+        # Gather user preferences
         preferences = get_user_input()
 
         print("\nLoading and filtering points of interest...")
@@ -210,18 +223,19 @@ def main():
         print("Generating your travel plan...")
         plan = planner.generate_travel_plan(poi_dict, preferences)
 
-        print("Generating thumbnail...")
-        image_url = image_generator.generate_trip_image(plan['trip_summary'], preferences.interests)
-        if image_url:
-            print(f"Generated image URL: {image_url}")
-            save_image = input("Do you want to save this image? (y/n): ").lower()
-            if save_image == 'y':
-                filename = "travel_poster.png"
-                image_generator.save_image_from_url(image_url, filename)
-        else:
-            print("Failed to generate trip image.")
+        # print("Generating thumbnail...")
+        # image_url = image_generator.generate_trip_image(plan['trip_summary'], preferences.interests)
+        # if image_url:
+        #     print(f"Generated image URL: {image_url}")
+        #     save_image = input("Do you want to save this image? (y/n): ").lower()
+        #     if save_image == 'y':
+        #         filename = "travel_poster.png"
+        #         image_generator.save_image_from_url(image_url, filename)
+        # else:
+        #     print("Failed to generate trip image.")
 
-        display_travel_plan(plan, image_url)
+        # display_travel_plan(plan, image_url)
+        display_travel_plan(plan)
         save_plan_to_file(plan)
 
     except Exception as e:
