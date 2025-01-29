@@ -7,7 +7,6 @@ from user_preferences import UserPreferences
 from image_generator import ImageGenerator
 from text_generator import TextGenerator
 
-
 def get_openai_api_key():
     api_key = OPENAI_API_KEY
     if not api_key:
@@ -15,7 +14,6 @@ def get_openai_api_key():
         api_key = input("Please enter your OpenAI API key: ").strip()
         os.environ["OPENAI_API_KEY"] = api_key
     return api_key
-
 
 def get_user_input():
     print("\n=== Ireland Travel Planner ===\n")
@@ -133,7 +131,6 @@ def get_user_input():
         budget_level=budget
     )
 
-
 def display_travel_plan(plan, image_url=None):
     print("\n" + "=" * 50)
     print("YOUR IRELAND TRAVEL PLAN")
@@ -184,7 +181,6 @@ def display_travel_plan(plan, image_url=None):
     print(plan['general_tips'])
     print("\n" + "=" * 50)
 
-
 def save_plan_to_file(plan, filename="travel_plan.json"):
     directory = "./output"
     if not os.path.exists(directory):
@@ -195,7 +191,6 @@ def save_plan_to_file(plan, filename="travel_plan.json"):
         json.dump(plan, f, indent=2, ensure_ascii=False)
     print(f"\nPlan saved to {file_path}")
 
-
 def main():
     try:
         api_key = get_openai_api_key()
@@ -204,7 +199,6 @@ def main():
 
         text_generator = TextGenerator()
         planner = TravelPlanner(text_generator)
-
         poi_manager = POIManager()
         image_generator = ImageGenerator(api_key)
 
@@ -232,7 +226,6 @@ def main():
 
     except Exception as e:
         print(f"\nError: {str(e)}")
-
 
 if __name__ == "__main__":
     main()

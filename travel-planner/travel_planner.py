@@ -4,7 +4,6 @@ from poi_description_generator import POIDescriptionGenerator
 from user_preferences import UserPreferences
 from text_generator import TextGenerator
 
-
 class TravelPlanner:
     def __init__(self, text_generator: TextGenerator):
         self.description_generator = POIDescriptionGenerator(text_generator)
@@ -127,8 +126,7 @@ class TravelPlanner:
         organized_days = self._parse_organized_days(plan_text, filtered_pois, preferences)
         return organized_days
 
-    def _parse_organized_days(self, organized_text: str, pois: List[Dict], preferences: UserPreferences) -> List[
-        List[Dict]]:
+    def _parse_organized_days(self, organized_text: str, pois: List[Dict], preferences: UserPreferences) -> List[List[Dict]]:
         organized_days = []
         current_day = []
 

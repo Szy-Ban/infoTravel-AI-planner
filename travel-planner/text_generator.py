@@ -1,21 +1,20 @@
+import os
 import time
 import requests
 import openai
 import torch
-from transformers import (
-    AutoTokenizer,
-    AutoModelForCausalLM,
-    GenerationConfig
-)
+from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 from config import (
     OPENAI_API_KEY,
     GROQ_API_KEY,
     LLM_PROVIDER,
     HUGGINGFACE_LLAMA_MODEL,
     MAX_TOKENS,
-    TEMPERATURE
+    TEMPERATURE,
+    OPENAI_4O_MINI_MODEL
 )
 
+# Domyślny model w Groq
 GROQ_DEFAULT_MODEL = "llama-3.3-70b-versatile"
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 
@@ -23,10 +22,11 @@ class TextGenerator:
     def __init__(self):
         """
         Obsługiwane wartości LLM_PROVIDER:
-         - "openai-3.5" -> GPT-3.5-turbo
-         - "openai-4"   -> GPT-4
-         - "huggingface"-> lokalny model (np. Llama2)
-         - "groq"       -> API Groq
+         - "openai-3.5"    => GPT-3.5-turbo
+         - "openai-4"      => GPT-4
+         - "openai-4o-mini"=> GPT-4o-mini
+         - "huggingface"   => model HF
+         - "groq"          => Groq
         """
         self.provider = LLM_PROVIDER.lower()
 
@@ -39,6 +39,11 @@ class TextGenerator:
             openai.api_key = OPENAI_API_KEY
             self.openai_model_name = "gpt-4"
             print("[TextGenerator] Using OpenAI GPT-4")
+
+        elif self.provider == "openai-4o-mini":
+            openai.api_key = OPENAI_API_KEY
+            self.openai_model_name = OPENAI_4O_MINI_MODEL
+            print("[TextGenerator] Using OpenAI GPT-4o-mini")
 
         elif self.provider == "huggingface":
             print(f"[TextGenerator] Loading local HuggingFace model: {HUGGINGFACE_LLAMA_MODEL} ...")
@@ -64,8 +69,7 @@ class TextGenerator:
             raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER}")
 
     def generate_chat_completion(self, system_prompt: str, user_prompt: str) -> str:
-
-        if self.provider in ("openai-3.5", "openai-4"):
+        if self.provider in ("openai-3.5", "openai-4", "openai-4o-mini"):
             return self._generate_openai(system_prompt, user_prompt)
         elif self.provider == "huggingface":
             return self._generate_huggingface(system_prompt, user_prompt)
@@ -74,9 +78,7 @@ class TextGenerator:
         else:
             return "Error: Provider not implemented!"
 
-    # ----------------- OPENAI -----------------
     def _generate_openai(self, system_prompt: str, user_prompt: str) -> str:
-
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
@@ -93,7 +95,6 @@ class TextGenerator:
             print(f"[OpenAI Error] {str(e)}")
             return "Error: unable to get response from OpenAI."
 
-    # ----------------- HUGGING FACE -----------------
     def _generate_huggingface(self, system_prompt: str, user_prompt: str) -> str:
         combined_prompt = f"System: {system_prompt}\nUser: {user_prompt}\nAssistant:"
         inputs = self.tokenizer(combined_prompt, return_tensors="pt").to(self.model.device)
@@ -110,7 +111,6 @@ class TextGenerator:
             text = text.split("Assistant:")[-1]
         return text.strip()
 
-    # ----------------- GROQ -----------------
     def _generate_groq(self, system_prompt: str, user_prompt: str) -> str:
         url = GROQ_ENDPOINT
         headers = {
