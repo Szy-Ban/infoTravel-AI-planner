@@ -12,6 +12,35 @@ System analizujący preferencje użytkownika (np. preferowane typy aktywności, 
 - Sugerowanie dodatkowych atrakcji w okolicy.
 - Generowanie miniaturki na podstawie wygenerowanego planu podróży
 
+### Struktura Projektu:
+
+- **config.py**
+    Centralna konfiguracja (klucze API, wybór modelu, domyślne parametry).
+
+- **image_generator.py**
+    Korzysta z OpenAI Image API do generowania miniaturki podróży.
+
+- **main.py**
+    Główny punkt wejścia: zbiera dane od użytkownika, tworzy plan, wyświetla wyniki.
+
+- **poi.py**
+    Model danych dla pojedynczego Punktu Zainteresowania (POI).
+
+- **poi_description_generator.py**
+    Generuje opisy tekstowe dla POI, codzienne podsumowania i wskazówki dotyczące planu podróży.
+
+- **poi_manager.py**
+    Wczytuje POI z pliku JSON, filtruje je na podstawie preferencji użytkownika.
+
+- **text_generator.py**
+    Abstrahuje wywołania LLM. Obsługuje OpenAI, Hugging Face lub Groq do generowania tekstu.
+
+- **travel_planner.py**
+    Główna logika budowania wielodniowego planu podróży na podstawie dostępnych POI.
+
+- **user_preferences.py**
+    Model danych do przechowywania ustawień użytkownika.
+
 ### Instalacja
 1. Pobierz repo
 2. Zainstaluj wymagane pluginy
