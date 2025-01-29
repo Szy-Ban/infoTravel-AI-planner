@@ -223,19 +223,19 @@ def main():
         print("Generating your travel plan...")
         plan = planner.generate_travel_plan(poi_dict, preferences)
 
-        # print("Generating thumbnail...")
-        # image_url = image_generator.generate_trip_image(plan['trip_summary'], preferences.interests)
-        # if image_url:
-        #     print(f"Generated image URL: {image_url}")
-        #     save_image = input("Do you want to save this image? (y/n): ").lower()
-        #     if save_image == 'y':
-        #         filename = "travel_poster.png"
-        #         image_generator.save_image_from_url(image_url, filename)
-        # else:
-        #     print("Failed to generate trip image.")
+        print("Generating thumbnail...")
+        image_url = image_generator.generate_trip_image(plan['trip_summary'], preferences.interests)
+        if image_url:
+            print(f"Generated image URL: {image_url}")
+            save_image = input("Do you want to save this image? (y/n): ").lower()
+            if save_image == 'y':
+                filename = "travel_poster.png"
+                image_generator.save_image_from_url(image_url, filename)
+        else:
+            print("Failed to generate trip image.")
 
-        # display_travel_plan(plan, image_url)
-        display_travel_plan(plan)
+        display_travel_plan(plan, image_url)
+        # display_travel_plan(plan)
         save_plan_to_file(plan)
 
     except Exception as e:

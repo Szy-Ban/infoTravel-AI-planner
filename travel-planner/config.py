@@ -12,7 +12,7 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 #   "openai-4o-mini"=> GPT-4o-mini (like "gpt-4o-mini-2024-07-18")
 #   "huggingface"   => local HF model
 #   "groq"          => Groq's LLM
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "groq")
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai-3.5")
 
 OPENAI_4O_MINI_MODEL = "gpt-4o-mini"
 
